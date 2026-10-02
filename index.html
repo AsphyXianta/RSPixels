@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RS PIXELS</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
+    <link rel="stylesheet" href="rstyle.css">
+</head>
+
 <body>
 
 <!-- ================= NAVIGATION ================= -->
 
-<header>
+<header id="home">
 
     <nav class="navbar">
 
         <div class="logo">
 
-            <!-- Replace with RS Pixels Logo -->
+            <!-- IMAGE: RS Pixels Logo
+                 Use: Official RS Pixels logo.
+                 Suggested file: images/logo.png -->
             <img src="images/logo.png" alt="RS Pixels Logo">
 
         </div>
 
         <ul>
 
-            <li><a href="#">Home</a></li>
+            <li><a href="#home">Home</a></li>
 
-            <li><a href="#">About</a></li>
+            <li><a href="#about">About</a></li>
 
-            <li><a href="#">Services</a></li>
+            <li><a href="#services">Services</a></li>
 
-            <li><a href="#">Products</a></li>
+            <li><a href="#products">Products</a></li>
 
-            <li><a href="#">Portfolio</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
 
             <li><a href="#faq">FAQ</a></li>
 
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
 
         </ul>
 
-        <a href="#" class="button">Get Started</a>
+        <!-- Goes directly to How to Order -->
+        <a href="#process" class="button">Get Started</a>
 
     </nav>
 
 </header>
+
 
 <!-- ================= HERO ================= -->
 
@@ -56,43 +61,49 @@
             Printing Solution
         </h1>
 
-        <!-- Replace with company introduction -->
-
         <p>
 
-            Write a short introduction about RS Pixels here.
-
-            Explain what your company offers and why customers
-
-            should choose your services.
+            RS Pixels is a local printing and apparel business established in 2021.
+            We provide quality t-shirt printing, tarpaulins, stickers, and
+            large-format printing for individuals, schools, organizations,
+            and businesses. We aim to provide reliable service, quality output,
+            and designs that bring our customers' ideas to life.
 
         </p>
 
-        <a href="#" class="button">Get Started</a>
+        <!-- Goes to How to Order -->
+        <a href="#process" class="button">Get Started</a>
 
-        <a href="#" class="button outline">Talk to Sales</a>
+        <!-- Goes directly to Contact -->
+        <a href="#contact" class="button outline">Talk to Sales</a>
 
     </div>
 
     <div class="hero-image">
 
-        <!-- Replace with Hero Banner -->
-
-        <img src="images/hero-image.png" alt="Hero Image">
+        <!-- IMAGE: Hero Banner
+             Use: A high-quality photo showing RS Pixels printing work,
+             custom shirts, printing machines, tarpaulins, or a combination
+             of your products and services.
+             Suggested file: images/hero-image.png -->
+        <img src="images/hero-image.png" alt="RS Pixels printing and apparel services">
 
     </div>
 
 </section>
 
+
 <!-- ================= ABOUT ================= -->
 
-<section class="about">
+<section class="about" id="about">
 
     <div class="about-image">
 
-        <!-- Replace with Company Photo -->
-
-        <img src="images/about.jpg" alt="About RS Pixels">
+        <!-- IMAGE: About RS Pixels
+             Use: Actual photo of the RS Pixels store, printing workspace,
+             equipment, staff, or completed printing projects.
+             Suggested file: images/about.jpg -->
+        <img src="images/about.jpg" alt="RS Pixels store and printing workspace">
 
     </div>
 
@@ -100,35 +111,34 @@
 
         <h2>About Us</h2>
 
-        <!-- Replace with Company Story -->
-
         <p>
 
-            Write the story of RS Pixels here.
-
-            Explain when your business started,
-
-            your mission, vision, and company background.
+            RS Pixels started in 2021 as a local creative and printing business
+            in San Roque, San Leonardo, Nueva Ecija. We specialize in apparel
+            printing and advertising materials, combining creative design with
+            practical printing solutions. From custom shirts to tarpaulins,
+            stickers, and large-format prints, we help customers turn their
+            ideas into finished products.
 
         </p>
 
         <h3>Mission</h3>
 
-        <!-- Replace Mission -->
-
         <p>
 
-            Write your mission here.
+            To provide quality printing and apparel services with reliable
+            customer service, creative solutions, and attention to detail
+            while making every project convenient and worthwhile for our customers.
 
         </p>
 
         <h3>Vision</h3>
 
-        <!-- Replace Vision -->
-
         <p>
 
-            Write your vision here.
+            To grow as a trusted local printing and apparel business known for
+            quality products, creative work, dependable service, and strong
+            relationships with our customers and community.
 
         </p>
 
@@ -136,7 +146,10 @@
 
 </section>
 
-<section class="services">
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
 
     <div class="services-content">
 
@@ -144,11 +157,10 @@
 
         <p>
 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-            Nam venenatis, ipsum at fermentum pretium, risus libero fringilla lorem, id pellentesque risus orci eget lorem.
-
-            Fusce ac sem dui. Sed a nisl lobortis, venenatis ex nec, mattis risus.
+            RS Pixels provides practical printing and apparel services for
+            personal projects, schools, organizations, events, and businesses.
+            Our services include custom apparel printing, tarpaulins, stickers,
+            signage, and large-format printing based on your design and project needs.
 
         </p>
 
@@ -156,24 +168,72 @@
 
     <div class="slider-wrap">
 
-        <button class="slider-arrow" type="button" data-target="services-track" data-direction="prev" aria-label="Previous services">&#8249;</button>
+        <button
+            class="slider-arrow"
+            type="button"
+            data-target="services-track"
+            data-direction="prev"
+            aria-label="Previous services">
+            &#8249;
+        </button>
 
         <div class="slider-track" id="services-track">
 
-            <img src="images/bg.png" alt="Services RS Pixels" class="slider-image">
-            <img src="images/bg.png" alt="Services RS Pixels" class="slider-image">
-            <img src="images/bg.png" alt="Services RS Pixels" class="slider-image">
-            <img src="images/bg.png" alt="Services RS Pixels" class="slider-image">
+            <!-- IMAGE: Custom Apparel Printing
+                 Use: Actual photo of printed T-shirts, jerseys, uniforms,
+                 or other custom apparel.
+                 Suggested file: images/service-apparel.jpg -->
+            <img
+                src="images/bg.png"
+                alt="Custom apparel printing by RS Pixels"
+                class="slider-image">
+
+            <!-- IMAGE: Tarpaulin Printing
+                 Use: Actual photo of finished tarpaulin banners,
+                 event banners, or promotional prints.
+                 Suggested file: images/service-tarpaulin.jpg -->
+            <img
+                src="images/bg.png"
+                alt="Tarpaulin printing by RS Pixels"
+                class="slider-image">
+
+            <!-- IMAGE: Sticker Printing
+                 Use: Actual photo of printed stickers, labels,
+                 decals, or promotional stickers.
+                 Suggested file: images/service-stickers.jpg -->
+            <img
+                src="images/bg.png"
+                alt="Sticker printing by RS Pixels"
+                class="slider-image">
+
+            <!-- IMAGE: Large Format Printing
+                 Use: Actual photo of signage, banners, posters,
+                 or other large-format printing projects.
+                 Suggested file: images/service-large-format.jpg -->
+            <img
+                src="images/bg.png"
+                alt="Large-format printing by RS Pixels"
+                class="slider-image">
 
         </div>
 
-        <button class="slider-arrow" type="button" data-target="services-track" data-direction="next" aria-label="Next services">&#8250;</button>
+        <button
+            class="slider-arrow"
+            type="button"
+            data-target="services-track"
+            data-direction="next"
+            aria-label="Next services">
+            &#8250;
+        </button>
 
     </div>
 
 </section>
 
-<section class="products">
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products" id="products">
 
     <div class="products-content">
 
@@ -181,11 +241,10 @@
 
         <p>
 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-            Nam venenatis, ipsum at fermentum pretium, risus libero fringilla lorem, id pellentesque risus orci eget lorem.
-
-            Fusce ac sem dui. Sed a nisl lobortis, venenatis ex nec, mattis risus.
+            Choose from custom T-shirts and apparel, tarpaulins, stickers,
+            signage, and other printed materials. Our products can be prepared
+            for events, uniforms, promotions, business branding, school
+            activities, and personal projects.
 
         </p>
 
@@ -193,24 +252,69 @@
 
     <div class="slider-wrap">
 
-        <button class="slider-arrow" type="button" data-target="products-track" data-direction="prev" aria-label="Previous products">&#8249;</button>
+        <button
+            class="slider-arrow"
+            type="button"
+            data-target="products-track"
+            data-direction="prev"
+            aria-label="Previous products">
+            &#8249;
+        </button>
 
         <div class="slider-track" id="products-track">
 
-            <img src="images/bg.png" alt="Products RS Pixels" class="slider-image">
-            <img src="images/bg.png" alt="Products RS Pixels" class="slider-image">
-            <img src="images/bg.png" alt="Products RS Pixels" class="slider-image">
-            <img src="images/bg.png" alt="Products RS Pixels" class="slider-image">
+            <!-- IMAGE: Custom T-Shirts
+                 Use: Actual photos of your printed T-shirts.
+                 Suggested file: images/product-shirts.jpg -->
+            <img
+                src="images/bg.png"
+                alt="Custom T-shirts by RS Pixels"
+                class="slider-image">
+
+            <!-- IMAGE: Tarpaulin Products
+                 Use: Actual photos of finished tarpaulins.
+                 Suggested file: images/product-tarpaulin.jpg -->
+            <img
+                src="images/bg.png"
+                alt="Tarpaulin products by RS Pixels"
+                class="slider-image">
+
+            <!-- IMAGE: Sticker Products
+                 Use: Actual photos of your sticker products.
+                 Suggested file: images/product-stickers.jpg -->
+            <img
+                src="images/bg.png"
+                alt="Sticker products by RS Pixels"
+                class="slider-image">
+
+            <!-- IMAGE: Signage / Large Format
+                 Use: Actual photos of signage, banners,
+                 posters, or large-format prints.
+                 Suggested file: images/product-signage.jpg -->
+            <img
+                src="images/bg.png"
+                alt="Signage and large-format products by RS Pixels"
+                class="slider-image">
 
         </div>
 
-        <button class="slider-arrow" type="button" data-target="products-track" data-direction="next" aria-label="Next products">&#8250;</button>
+        <button
+            class="slider-arrow"
+            type="button"
+            data-target="products-track"
+            data-direction="next"
+            aria-label="Next products">
+            &#8250;
+        </button>
 
     </div>
 
 </section>
 
-<section class="portfolio-section">
+
+<!-- ================= PORTFOLIO ================= -->
+
+<section class="portfolio-section" id="portfolio">
 
     <div class="portfolio-header">
 
@@ -218,70 +322,132 @@
 
         <p>
 
-            Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum
-            tempus hac tellus libero accumsan.
+            Explore selected RS Pixels work, including custom shirt designs,
+            tarpaulins, signage, stickers, and other printed materials.
+            Our portfolio shows the creative and printing projects we produce
+            for different customer needs.
 
         </p>
 
     </div>
 
-    <div class="portfolio-grid">
+
+    <div class="portfolio-grid" id="portfolio-track">
 
         <article class="portfolio-card">
 
-            <img src="images/bg.png" alt="Shirt design preview" class="portfolio-thumb">
+            <!-- IMAGE: Custom Shirt Portfolio
+                 Use: Actual photo of your best custom shirt projects.
+                 Suggested file: images/portfolio-shirts.jpg -->
+            <img
+                src="images/bg.png"
+                alt="Custom shirt designs by RS Pixels"
+                class="portfolio-thumb">
 
             <div class="portfolio-copy">
-                <span class="tagline">TAGLINE</span>
+
+                <span class="tagline">CUSTOM APPAREL</span>
+
                 <h3>Discover Our<br>Shirt Designs</h3>
+
             </div>
 
         </article>
 
+
         <article class="portfolio-card">
 
-            <img src="images/bg.png" alt="Tarpaulin gallery preview" class="portfolio-thumb">
+            <!-- IMAGE: Tarpaulin Portfolio
+                 Use: Actual photo of completed tarpaulin projects.
+                 Suggested file: images/portfolio-tarpaulin.jpg -->
+            <img
+                src="images/bg.png"
+                alt="Tarpaulin printing projects by RS Pixels"
+                class="portfolio-thumb">
 
             <div class="portfolio-copy">
-                <span class="tagline">TAGLINE</span>
-                <h3>Discover Our<br>Tarpaulin Gallery</h3>
+
+                <span class="tagline">TARPAULIN PRINTING</span>
+
+                <h3>Tarpaulin &<br>Event Prints</h3>
+
             </div>
 
         </article>
 
+
         <article class="portfolio-card">
 
-            <img src="images/bg.png" alt="Signage project preview" class="portfolio-thumb">
+            <!-- IMAGE: Signage Portfolio
+                 Use: Actual photo of signs, banners, storefront signs,
+                 or other signage projects.
+                 Suggested file: images/portfolio-signage.jpg -->
+            <img
+                src="images/bg.png"
+                alt="Signage projects by RS Pixels"
+                class="portfolio-thumb">
 
             <div class="portfolio-copy">
-                <span class="tagline">TAGLINE</span>
+
+                <span class="tagline">SIGNAGE & DISPLAY</span>
+
                 <h3>Signage Projects</h3>
+
             </div>
 
         </article>
 
+
         <article class="portfolio-card">
 
-            <img src="images/bg.png" alt="Portfolio preview" class="portfolio-thumb">
+            <!-- IMAGE: Sticker / Promotional Portfolio
+                 Use: Actual photo of sticker, label, or promotional
+                 printing projects.
+                 Suggested file: images/portfolio-stickers.jpg -->
+            <img
+                src="images/bg.png"
+                alt="Sticker and promotional printing projects by RS Pixels"
+                class="portfolio-thumb">
 
             <div class="portfolio-copy">
-                <span class="tagline">TAGLINE</span>
-                <h3>Discover Our<br>Tarpaulin Gallery</h3>
+
+                <span class="tagline">STICKERS & PRINTS</span>
+
+                <h3>Sticker &<br>Promotional Prints</h3>
+
             </div>
 
         </article>
 
     </div>
 
+
     <div class="work-arrows">
 
-        <button type="button" aria-label="Previous slide">&#8249;</button>
+        <button
+            class="slider-arrow"
+            type="button"
+            data-target="portfolio-track"
+            data-direction="prev"
+            aria-label="Previous portfolio item">
+            &#8249;
+        </button>
 
-        <button type="button" aria-label="Next slide">&#8250;</button>
+        <button
+            class="slider-arrow"
+            type="button"
+            data-target="portfolio-track"
+            data-direction="next"
+            aria-label="Next portfolio item">
+            &#8250;
+        </button>
 
     </div>
 
 </section>
+
+
+<!-- ================= REVIEWS ================= -->
 
 <section class="reviews">
 
@@ -291,53 +457,111 @@
 
         <p>
 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-            Nam venenatis, ipsum at fermentum pretium, risus libero fringilla lorem, id pellentesque risus orci eget lorem.
-
-            Fusce ac sem dui. Sed a nisl lobortis, venenatis ex nec, mattis risus.
+            Customer feedback helps RS Pixels improve its printing services,
+            communication, product quality, and overall customer experience.
+            We value every project and aim to provide reliable service for
+            every customer.
 
         </p>
 
+
         <div class="slider-wrap reviews-slider">
 
-        <button class="slider-arrow" type="button" data-target="reviews-track" data-direction="prev" aria-label="Previous reviews">&#8249;</button>
+            <button
+                class="slider-arrow"
+                type="button"
+                data-target="reviews-track"
+                data-direction="prev"
+                aria-label="Previous reviews">
+                &#8249;
+            </button>
 
-        <div class="slider-track" id="reviews-track">
 
-            <article class="review-card">
-                <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                <blockquote>“Add a customer review here.”</blockquote>
-                <cite>Customer Name</cite>
-            </article>
+            <div class="slider-track" id="reviews-track">
 
-            <article class="review-card">
-                <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                <blockquote>“Replace this text with another review.”</blockquote>
-                <cite>Customer Name</cite>
-            </article>
+                <article class="review-card">
 
-            <article class="review-card">
-                <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                <blockquote>“Share what your customers say about your work.”</blockquote>
-                <cite>Customer Name</cite>
-            </article>
+                    <div class="review-stars" aria-label="5 out of 5 stars">
+                        ★★★★★
+                    </div>
 
-            <article class="review-card">
-                <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                <blockquote>“Add another review to this card.”</blockquote>
-                <cite>Customer Name</cite>
-            </article>
+                    <blockquote>
+                        “RS Pixels focuses on quality printing and helpful
+                        service for every project.”
+                    </blockquote>
+
+                    <cite>RS Pixels Customer</cite>
+
+                </article>
+
+
+                <article class="review-card">
+
+                    <div class="review-stars" aria-label="5 out of 5 stars">
+                        ★★★★★
+                    </div>
+
+                    <blockquote>
+                        “From apparel printing to advertising materials,
+                        RS Pixels provides practical printing solutions.”
+                    </blockquote>
+
+                    <cite>RS Pixels Customer</cite>
+
+                </article>
+
+
+                <article class="review-card">
+
+                    <div class="review-stars" aria-label="5 out of 5 stars">
+                        ★★★★★
+                    </div>
+
+                    <blockquote>
+                        “We value every project and work to deliver clean,
+                        reliable, and useful printed products.”
+                    </blockquote>
+
+                    <cite>RS Pixels Customer</cite>
+
+                </article>
+
+
+                <article class="review-card">
+
+                    <div class="review-stars" aria-label="5 out of 5 stars">
+                        ★★★★★
+                    </div>
+
+                    <blockquote>
+                        “RS Pixels continues to improve its services by
+                        listening to customer needs and feedback.”
+                    </blockquote>
+
+                    <cite>RS Pixels Customer</cite>
+
+                </article>
+
+            </div>
+
+
+            <button
+                class="slider-arrow"
+                type="button"
+                data-target="reviews-track"
+                data-direction="next"
+                aria-label="Next reviews">
+                &#8250;
+            </button>
 
         </div>
-
-        <button class="slider-arrow" type="button" data-target="reviews-track" data-direction="next" aria-label="Next reviews">&#8250;</button>
-
-    </div>
 
     </div>
 
 </section>
+
+
+<!-- ================= FAQ ================= -->
 
 <section class="faq-section" id="faq">
 
@@ -345,99 +569,1050 @@
 
         <h2>Frequently Asked Questions</h2>
 
-        <p>Find answers to common questions about our services and products.</p>
+        <p>
+            Find answers to common questions about our services and products.
+        </p>
 
     </div>
+
 
     <div class="faq-list">
 
         <details class="faq-item">
-            <summary>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</summary>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci
-netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes.</p>
+
+            <summary>Where is the main store located at?</summary>
+
+            <p>
+                Our main store is located at Looban St., San Roque,
+                San Leonardo, Nueva Ecija.
+            </p>
+
         </details>
 
-        <details class="faq-item">
-            <summary>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</summary>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis</p>
-        </details>
 
         <details class="faq-item">
-            <summary>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</summary>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis</p>
+
+            <summary>What are the available payment methods?</summary>
+
+            <p>
+                Customers may contact RS Pixels to confirm the available
+                payment methods for their order before making a payment.
+            </p>
+
         </details>
 
-        <details class="faq-item">
-            <summary>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</summary>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis</p>
-        </details>
 
         <details class="faq-item">
-            <summary>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</summary>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis.</p>
+
+            <summary>
+                How fast is the typical shipping time after ordering products?
+            </summary>
+
+            <p>
+                Shipping time depends on the product, order quantity,
+                location, and delivery service. RS Pixels can provide an
+                estimated delivery time when the order details are confirmed.
+            </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+            <summary>
+                Are there return policies when the product I received is unsatisfactory?
+            </summary>
+
+            <p>
+                If the product received is unsatisfactory, please contact
+                RS Pixels and provide the order details and relevant photos
+                so the concern can be reviewed.
+            </p>
+
+        </details>
+
+
+        <details class="faq-item">
+
+            <summary>
+                Can I cancel an order before it ships out?
+            </summary>
+
+            <p>
+                Customers may request cancellation before an order is shipped.
+                For orders already in transit, please contact RS Pixels as soon
+                as possible so the concern can be checked.
+            </p>
+
         </details>
 
     </div>
 
 </section>
 
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="why-us">
+
+    <div class="why-us-header">
+
+        <span class="section-label">WHY RS PIXELS</span>
+
+        <h2>Printing Made for Your Ideas</h2>
+
+        <p>
+
+            From custom apparel to advertising materials, RS Pixels provides
+            practical printing solutions designed for personal, school,
+            organization, and business needs.
+
+        </p>
+
+    </div>
+
+
+    <div class="why-us-grid">
+
+        <article class="why-card">
+
+            <!-- ICON: Quality Output -->
+            <div class="why-icon">✓</div>
+
+            <h3>Quality Output</h3>
+
+            <p>
+                We focus on clean designs, proper printing, and quality output
+                for every project.
+            </p>
+
+        </article>
+
+
+        <article class="why-card">
+
+            <!-- ICON: Custom Designs -->
+            <div class="why-icon">✦</div>
+
+            <h3>Custom Designs</h3>
+
+            <p>
+                Create personalized apparel and printed materials based on
+                your preferred design, style, and requirements.
+            </p>
+
+        </article>
+
+
+        <article class="why-card">
+
+            <!-- ICON: Reliable Service -->
+            <div class="why-icon">↗</div>
+
+            <h3>Reliable Service</h3>
+
+            <p>
+                We work with customers throughout the process to help make
+                every project clear and convenient.
+            </p>
+
+        </article>
+
+
+        <article class="why-card">
+
+            <!-- ICON: Local Business -->
+            <div class="why-icon">⌖</div>
+
+            <h3>Local & Accessible</h3>
+
+            <p>
+                Based in San Roque, San Leonardo, Nueva Ecija, we serve
+                customers looking for local printing and apparel solutions.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRINTING MATERIALS ================= -->
+
+<section class="materials-section">
+
+    <div class="materials-header">
+
+        <span class="section-label">APPAREL MATERIALS</span>
+
+        <h2>Choose the Right Material</h2>
+
+        <p>
+
+            RS Pixels offers different apparel materials suitable for
+            different styles, comfort preferences, and printing needs.
+
+        </p>
+
+    </div>
+
+
+    <div class="materials-grid">
+
+        <article class="material-card">
+
+            <!-- IMAGE: Polydex Material
+                 Use: Actual close-up photo of Polydex fabric or finished Polydex shirt.
+                 Suggested file: images/material-polydex.jpg -->
+            <div class="material-image">
+
+                <img
+                    src="images/bg.png"
+                    alt="Polydex apparel material">
+
+            </div>
+
+            <div class="material-content">
+
+                <h3>Polydex</h3>
+
+                <p>
+                    A practical apparel material suitable for custom
+                    printed shirts and sportswear.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="material-card">
+
+            <!-- IMAGE: Dryfit Material
+                 Use: Actual close-up photo of Dryfit fabric or finished Dryfit apparel.
+                 Suggested file: images/material-dryfit.jpg -->
+            <div class="material-image">
+
+                <img
+                    src="images/bg.png"
+                    alt="Dryfit apparel material">
+
+            </div>
+
+            <div class="material-content">
+
+                <h3>Dryfit</h3>
+
+                <p>
+                    A lightweight material commonly used for sports,
+                    activewear, teams, and events.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="material-card">
+
+            <!-- IMAGE: Aircool Material
+                 Use: Actual close-up photo of Aircool fabric or finished Aircool apparel.
+                 Suggested file: images/material-aircool.jpg -->
+            <div class="material-image">
+
+                <img
+                    src="images/bg.png"
+                    alt="Aircool apparel material">
+
+            </div>
+
+            <div class="material-content">
+
+                <h3>Aircool</h3>
+
+                <p>
+                    A comfortable apparel option suitable for custom
+                    shirts and everyday wear.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="material-card">
+
+            <!-- IMAGE: Silk Material
+                 Use: Actual close-up photo of Silk fabric or finished Silk apparel.
+                 Suggested file: images/material-silk.jpg -->
+            <div class="material-image">
+
+                <img
+                    src="images/bg.png"
+                    alt="Silk apparel material">
+
+            </div>
+
+            <div class="material-content">
+
+                <h3>Silk</h3>
+
+                <p>
+                    A smooth material option that can be used for
+                    customized apparel and special projects.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW TO ORDER ================= -->
+
+<section class="process-section" id="process">
+
+    <div class="process-header">
+
+        <span class="section-label">HOW IT WORKS</span>
+
+        <h2>How to Order</h2>
+
+        <p>
+            Getting your custom printing project started is simple.
+        </p>
+
+    </div>
+
+
+    <div class="process-grid">
+
+        <article class="process-card">
+
+            <span class="process-number">01</span>
+
+            <h3>Send Your Design</h3>
+
+            <p>
+                Provide your design, concept, logo, artwork, or
+                specifications for your project.
+            </p>
+
+        </article>
+
+
+        <article class="process-card">
+
+            <span class="process-number">02</span>
+
+            <h3>Choose Your Product</h3>
+
+            <p>
+                Select the apparel, printing material, quantity,
+                and other requirements for your order.
+            </p>
+
+        </article>
+
+
+        <article class="process-card">
+
+            <span class="process-number">03</span>
+
+            <h3>Confirm Your Order</h3>
+
+            <p>
+                Review the project details, quantity, design, and
+                other order requirements before production.
+            </p>
+
+        </article>
+
+
+        <article class="process-card">
+
+            <span class="process-number">04</span>
+
+            <h3>Receive Your Output</h3>
+
+            <p>
+                Once production is completed, your finished custom product
+                can be prepared for pickup or delivery.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BUSINESS INFORMATION / CONTACT ================= -->
+
+<section class="business-info" id="contact">
+
+    <div class="business-info-content">
+
+        <div class="business-info-text">
+
+            <span class="section-label">RS PIXELS</span>
+
+            <h2>Visit or Contact Us</h2>
+
+            <p>
+                Have a design in mind? Need custom apparel or printing
+                materials for your next project? Get in touch with RS Pixels
+                for your printing and apparel needs.
+            </p>
+
+
+            <div class="business-details">
+
+                <div class="business-detail">
+
+                    <span class="detail-icon">⌖</span>
+
+                    <div>
+
+                        <strong>Location</strong>
+
+                        <p>
+                            Looban St., San Roque,
+                            San Leonardo, Nueva Ecija
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="business-detail">
+
+                    <span class="detail-icon">◷</span>
+
+                    <div>
+
+                        <strong>Business Hours</strong>
+
+                        <p>
+                            Monday – Saturday,
+                            9:00 AM – 5:00 PM
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="business-detail">
+
+                    <span class="detail-icon">✉</span>
+
+                    <div>
+
+                        <strong>Inquiries</strong>
+
+                        <p>
+                            Contact RS Pixels for orders,
+                            quotations, and project inquiries.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="business-buttons">
+
+                <a href="#faq" class="button">
+                    View FAQ
+                </a>
+
+                <!-- Already on Contact section -->
+                <a href="#contact" class="button outline-dark">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="business-info-image">
+
+            <!-- IMAGE: RS Pixels Business / Store
+                 Use: Actual photo of the RS Pixels store, workspace,
+                 staff, printing equipment, or storefront.
+                 Suggested file: images/store.jpg -->
+            <img
+                src="images/about.jpg"
+                alt="RS Pixels store and printing business">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FINAL CTA ================= -->
+
+<section class="final-cta">
+
+    <div class="final-cta-content">
+
+        <span class="section-label">START YOUR PROJECT</span>
+
+        <h2>Have an Idea? Let's Turn It Into Reality.</h2>
+
+        <p>
+
+            Whether you need custom apparel, tarpaulins, stickers,
+            or large-format printing, RS Pixels is ready to help
+            bring your project to life.
+
+        </p>
+
+
+        <div class="final-cta-buttons">
+
+            <!-- Goes to How to Order -->
+            <a href="#process" class="button">
+                Get Started
+            </a>
+
+            <!-- Goes to FAQ -->
+            <a href="#faq" class="button outline">
+                Learn More
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
 <footer class="site-footer">
 
     <div class="footer-content">
 
+
         <div class="footer-brand">
-            <img src="images/logo.png" alt="RS Pixels" class="footer-logo">
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma.</p>
+
+            <!-- IMAGE: Footer Logo
+                 Use: Official RS Pixels logo.
+                 Suggested file: images/logo.png -->
+            <img
+                src="images/logo.png"
+                alt="RS Pixels Logo"
+                class="footer-logo">
+
+
+            <p>
+                RS Pixels is a local printing and apparel business in
+                San Roque, San Leonardo, Nueva Ecija. We provide custom
+                apparel and printing services for individuals, schools,
+                organizations, and businesses.
+            </p>
+
 
             <div class="footer-socials" aria-label="Social media links">
+
+                <!-- Replace # with actual Facebook URL -->
                 <a href="#" aria-label="Facebook">f</a>
+
+                <!-- Replace # with actual Twitter/X URL -->
                 <a href="#" aria-label="Twitter">t</a>
+
+                <!-- Replace # with actual Instagram URL -->
                 <a href="#" aria-label="Instagram">ig</a>
+
+                <!-- Replace # with actual LinkedIn URL -->
                 <a href="#" aria-label="LinkedIn">in</a>
+
+                <!-- Replace # with actual YouTube URL -->
                 <a href="#" aria-label="YouTube">yt</a>
+
             </div>
+
         </div>
 
+
         <div class="footer-column">
+
             <h3>Product</h3>
-            <a href="#">Lorem Ipsum</a>
-            <a href="#">Lorem Ipsum</a>
-            <a href="#">Lorem Ipsum</a>
-            <a href="#">Lorem Ipsum</a>
-            <a href="#">Lorem Ipsum</a>
+
+            <a href="#products">Custom T-Shirts</a>
+
+            <a href="#products">Tarpaulins</a>
+
+            <a href="#products">Stickers</a>
+
+            <a href="#products">Large-Format Printing</a>
+
+            <a href="#products">Apparel Printing</a>
+
         </div>
 
+
         <div class="footer-column">
+
             <h3>Company</h3>
-            <a href="#">Lorem Ipsum</a>
-            <a href="#">Lorem Ipsum</a>
-            <a href="#">Lorem Ipsum</a>
-            <a href="#">Lorem Ipsum</a>
-            <a href="#">Lorem Ipsum</a>
+
+            <a href="#about">About RS Pixels</a>
+
+            <a href="#services">Our Services</a>
+
+            <a href="#products">Our Products</a>
+
+            <a href="#portfolio">Our Work</a>
+
+            <a href="#contact">Contact Us</a>
+
         </div>
 
+
         <div class="footer-column">
+
             <h3>Support</h3>
+
             <a href="#faq">FAQ</a>
-            <a href="#">Lorem Ipsum</a>
-            <a href="#">Lorem Ipsum</a>
-            <a href="#">Lorem Ipsum</a>
-            <a href="#">Lorem Ipsum</a>
+
+            <a href="#contact">Order Inquiries</a>
+
+            <a href="#contact">Customer Support</a>
+
+            <a href="#services">Printing Services</a>
+
+            <a href="#products">Product Information</a>
+
         </div>
 
     </div>
 
+
     <div class="footer-bottom">
-        <p>Copyright &copy; 2026 RS PIXELS | All Rights Reserved</p>
+
+        <p>
+            Copyright &copy; 2026 RS PIXELS | All Rights Reserved
+        </p>
+
         <div>
+
             <a href="#">Terms and Conditions</a>
+
             <span>|</span>
+
             <a href="#">Privacy Policy</a>
+
         </div>
+
     </div>
 
 </footer>
 
-</body>
 
+<!-- ========================================================= -->
+<!-- ================= JAVASCRIPT ============================ -->
+<!-- ========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /*
+        RS PIXELS RESPONSIVE CAROUSEL
+
+        This function controls:
+        - Services carousel
+        - Products carousel
+        - Reviews carousel
+        - Portfolio carousel
+
+        The amount of movement automatically changes
+        depending on the size of the screen and item.
+    */
+
+    const carouselButtons = document.querySelectorAll(
+        ".slider-arrow"
+    );
+
+
+    carouselButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const targetId = button.getAttribute("data-target");
+
+            const direction = button.getAttribute("data-direction");
+
+            const track = document.getElementById(targetId);
+
+
+            if (!track) {
+                return;
+            }
+
+
+            /*
+                Find the first visible item.
+
+                This allows the carousel to work with:
+                - Images
+                - Review cards
+                - Portfolio cards
+            */
+
+            const item = track.querySelector(
+                ".slider-image, .review-card, .portfolio-card"
+            );
+
+
+            if (!item) {
+                return;
+            }
+
+
+            /*
+                Get the actual width of the item.
+
+                This makes the arrow responsive because
+                the movement changes automatically on
+                desktop, tablet, and mobile.
+            */
+
+            const itemWidth = item.getBoundingClientRect().width;
+
+
+            /*
+                Get the gap between carousel items.
+            */
+
+            const trackStyle = window.getComputedStyle(track);
+
+            const gap =
+                parseFloat(trackStyle.columnGap) ||
+                parseFloat(trackStyle.gap) ||
+                20;
+
+
+            /*
+                Total movement.
+
+                Item width + gap means the next item
+                will move into position correctly.
+            */
+
+            const scrollAmount = itemWidth + gap;
+
+
+            /*
+                Determine direction.
+            */
+
+            let movement = scrollAmount;
+
+
+            if (direction === "prev") {
+                movement = -scrollAmount;
+            }
+
+
+            /*
+                Smooth responsive scrolling.
+            */
+
+            track.scrollBy({
+                left: movement,
+                behavior: "smooth"
+            });
+
+        });
+
+    });
+
+
+    /*
+        PORTFOLIO ARROWS
+
+        The portfolio uses the same carousel system,
+        so the arrows also work on desktop and mobile.
+    */
+
+
+    /*
+        Prevent horizontal mouse-wheel scrolling
+        from causing unwanted page movement when
+        the user is directly interacting with a carousel.
+    */
+
+    const carouselTracks = document.querySelectorAll(
+        ".slider-track, .portfolio-grid"
+    );
+
+
+    carouselTracks.forEach(function (track) {
+
+        track.addEventListener(
+            "wheel",
+            function (event) {
+
+                /*
+                    Only use horizontal scrolling when
+                    the track can actually scroll horizontally.
+                */
+
+                if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+
+                    if (track.scrollWidth > track.clientWidth) {
+
+                        track.scrollLeft += event.deltaY;
+
+                        event.preventDefault();
+
+                    }
+
+                }
+
+            },
+            {
+                passive: false
+            }
+        );
+
+    });
+
+
+    /*
+        KEYBOARD SUPPORT
+
+        When a carousel is focused, the user can
+        use the left and right arrow keys.
+    */
+
+    carouselTracks.forEach(function (track) {
+
+        track.setAttribute("tabindex", "0");
+
+
+        track.addEventListener("keydown", function (event) {
+
+            const item = track.querySelector(
+                ".slider-image, .review-card, .portfolio-card"
+            );
+
+
+            if (!item) {
+                return;
+            }
+
+
+            const itemWidth =
+                item.getBoundingClientRect().width;
+
+
+            const gap =
+                parseFloat(
+                    window.getComputedStyle(track).gap
+                ) || 20;
+
+
+            const movement = itemWidth + gap;
+
+
+            if (event.key === "ArrowRight") {
+
+                track.scrollBy({
+                    left: movement,
+                    behavior: "smooth"
+                });
+
+            }
+
+
+            if (event.key === "ArrowLeft") {
+
+                track.scrollBy({
+                    left: -movement,
+                    behavior: "smooth"
+                });
+
+            }
+
+        });
+
+    });
+
+
+    /*
+        NAVIGATION
+
+        Smooth scrolling is applied to internal
+        section links such as:
+
+        #about
+        #services
+        #products
+        #portfolio
+        #faq
+        #contact
+        #process
+    */
+
+    const internalLinks = document.querySelectorAll(
+        'a[href^="#"]'
+    );
+
+
+    internalLinks.forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            const targetId =
+                link.getAttribute("href");
+
+
+            /*
+                Ignore links that only contain "#".
+            */
+
+            if (
+                !targetId ||
+                targetId === "#"
+            ) {
+                return;
+            }
+
+
+            const target =
+                document.querySelector(targetId);
+
+
+            if (target) {
+
+                event.preventDefault();
+
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+
+                /*
+                    Update the URL hash without
+                    causing another jump.
+                */
+
+                history.pushState(
+                    null,
+                    "",
+                    targetId
+                );
+
+            }
+
+        });
+
+    });
+
+
+    /*
+        TOUCH / MOBILE SUPPORT
+
+        The browser naturally supports touch
+        swiping because the carousel tracks use
+        horizontal overflow.
+
+        This small enhancement makes the swipe
+        movement feel smoother on mobile.
+    */
+
+    carouselTracks.forEach(function (track) {
+
+        let startX = 0;
+        let startScrollLeft = 0;
+
+
+        track.addEventListener(
+            "touchstart",
+            function (event) {
+
+                startX =
+                    event.touches[0].pageX;
+
+                startScrollLeft =
+                    track.scrollLeft;
+
+            },
+            {
+                passive: true
+            }
+        );
+
+
+        track.addEventListener(
+            "touchmove",
+            function (event) {
+
+                const currentX =
+                    event.touches[0].pageX;
+
+                const difference =
+                    startX - currentX;
+
+
+                track.scrollLeft =
+                    startScrollLeft + difference;
+
+            },
+            {
+                passive: true
+            }
+        );
+
+    });
+
+
+    /*
+        UPDATE CAROUSEL AFTER RESIZE
+
+        This makes sure the arrows continue
+        calculating the correct item width after
+        changing from desktop to mobile.
+    */
+
+    window.addEventListener(
+        "resize",
+        function () {
+
+            carouselTracks.forEach(function (track) {
+
+                /*
+                    Force browser to recalculate
+                    the current carousel dimensions.
+                */
+
+                track.style.scrollBehavior = "smooth";
+
+            });
+
+        }
+    );
+
+});
+
+</script>
+
+
+</body>
 </html>
