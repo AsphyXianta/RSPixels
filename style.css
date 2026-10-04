@@ -1,0 +1,1916 @@
+/* ==================================================
+   CUSTOMIZATION
+   Change these values to update the site theme.
+================================================== */
+
+:root {
+    --color-primary: #0D47A1;
+    --color-primary-hover: #1565C0;
+    --color-accent: #FFC107;
+    --color-page-background: #F5F7FA;
+    --color-surface: #ffffff;
+    --color-heading: #22304a;
+    --color-body-text: #333;
+    --content-padding: 8%;
+    --section-padding: 80px;
+}
+
+/* ==================================================
+   GLOBAL RESET AND BASE STYLES
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--color-page-background);
+    color: var(--color-body-text);
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/* ==================================================
+   NAVIGATION
+================================================== */
+
+header {
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px var(--content-padding);
+    background: var(--color-primary);
+    gap: 25px;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li {
+    margin-left: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    transition: color .3s, opacity .3s;
+    white-space: nowrap;
+}
+
+.navbar ul li a:hover {
+    color: var(--color-accent);
+    opacity: .85;
+}
+
+.button {
+    display: inline-block;
+    background: var(--color-accent);
+    color: #000;
+    padding: 12px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background .3s, color .3s, transform .3s;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.button:hover {
+    background: var(--color-primary-hover);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    margin-left: 10px;
+    transition: background .3s, color .3s, transform .3s;
+}
+
+.outline:hover {
+    background: #fff;
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: var(--section-padding) var(--content-padding);
+    background: var(--color-primary);
+    color: white;
+    flex-wrap: wrap;
+    min-height: 620px;
+}
+
+.hero-text {
+    width: 50%;
+    max-width: 650px;
+}
+
+.hero-text h1 {
+    font-size: clamp(38px, 5vw, 55px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+    line-height: 1.7;
+    max-width: 650px;
+    color: rgba(255, 255, 255, .9);
+}
+
+.hero-image {
+    width: 40%;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+    border-radius: 18px;
+    transition: transform .3s, opacity .3s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.03);
+    opacity: .9;
+}
+
+/* ==================================================
+   ABOUT
+================================================== */
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    padding: 80px var(--content-padding);
+    flex-wrap: wrap;
+    background: var(--color-page-background);
+}
+
+.about-image {
+    width: 45%;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(13, 71, 161, .1);
+    transition: transform .3s, opacity .3s;
+}
+
+.about-image img:hover {
+    transform: scale(1.03);
+    opacity: .9;
+}
+
+.about-content {
+    width: 50%;
+}
+
+.about-content h2 {
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.about-content h3 {
+    margin-top: 25px;
+    color: var(--color-accent);
+}
+
+.about-content p {
+    margin-top: 10px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* ==================================================
+   SERVICES SECTION
+================================================== */
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--section-padding) var(--content-padding);
+    background: #ffffff;
+}
+
+.services-content {
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.services-content h2,
+.products-content h2,
+.reviews-content h2 {
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.services-content p,
+.products-content p,
+.reviews-content p {
+    margin-top: 10px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* ==================================================
+   SHARED CAROUSEL / SLIDER
+   Used by Services, Products, and Reviews.
+================================================== */
+
+.slider-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.slider-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex: 1;
+    min-width: 0;
+    padding: 8px 4px 15px;
+    overscroll-behavior-x: contain;
+}
+
+.slider-track::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-image {
+    width: 220px;
+    min-width: 220px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 16px;
+    background: #eef2f7;
+    box-shadow: 0 10px 20px rgba(13, 71, 161, .08);
+    transition: transform .3s, box-shadow .3s;
+    scroll-snap-align: start;
+}
+
+.slider-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 26px rgba(13, 71, 161, .18);
+}
+
+/* ==================================================
+   CAROUSEL ARROWS
+================================================== */
+
+.slider-arrow {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border: none;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 34px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background .3s, transform .3s, box-shadow .3s;
+    box-shadow: 0 6px 15px rgba(13, 71, 161, .18);
+}
+
+.slider-arrow:hover {
+    background: var(--color-primary-hover);
+    transform: scale(1.08);
+}
+
+.slider-arrow:active {
+    transform: scale(.95);
+}
+
+.slider-arrow:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+/* ==================================================
+   REVIEWS CAROUSEL
+================================================== */
+
+.reviews-slider {
+    --review-card-background: #ffffff;
+    --review-card-accent: #F9A825;
+    --review-card-width: 400px;
+}
+
+.review-card {
+    width: var(--review-card-width);
+    min-width: var(--review-card-width);
+    min-height: 220px;
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--review-card-background);
+    border: 1px solid rgba(13, 71, 161, 0.1);
+    border-radius: 14px;
+    box-shadow: 0 10px 20px rgba(13, 71, 161, 0.08);
+    text-align: left;
+    transition: transform .3s, box-shadow .3s, border-color .3s;
+    scroll-snap-align: start;
+}
+
+.review-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(13, 71, 161, .28);
+    box-shadow: 0 16px 28px rgba(13, 71, 161, .15);
+}
+
+.review-stars {
+    color: var(--review-card-accent);
+    letter-spacing: 2px;
+    font-size: 17px;
+}
+
+.review-card blockquote {
+    margin: 16px 0;
+    color: var(--color-heading);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.review-card cite {
+    color: var(--color-primary);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* ==================================================
+   PRODUCTS SECTION
+================================================== */
+
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--section-padding) var(--content-padding);
+    background: var(--color-page-background);
+}
+
+.products-content {
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+/* ==================================================
+   PORTFOLIO SECTION
+   Converted to responsive horizontal carousel
+   so the existing work arrows can control it.
+================================================== */
+
+.portfolio-section {
+    padding: 70px var(--content-padding) 40px;
+    background: var(--color-page-background);
+}
+
+.portfolio-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 35px;
+}
+
+.portfolio-header h2 {
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.portfolio-header p {
+    margin-top: 10px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Portfolio becomes a horizontal carousel */
+.portfolio-grid {
+    display: flex;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 8px 5px 15px;
+}
+
+.portfolio-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.portfolio-card {
+    background: #ffffff;
+    border-radius: 18px;
+    min-height: 280px;
+    height: 360px;
+    flex: 0 0 calc((100% - 30px) / 2);
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(13, 71, 161, 0.08);
+    box-shadow: 0 10px 25px rgba(13, 71, 161, 0.06);
+    transition: transform .3s, box-shadow .3s, border-color .3s;
+    scroll-snap-align: start;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(13, 71, 161, 0.22);
+    box-shadow: 0 16px 30px rgba(13, 71, 161, 0.14);
+}
+
+.portfolio-copy {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 70px 26px 22px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, .78));
+    color: #fff;
+}
+
+.tagline {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+    margin-bottom: 18px;
+}
+
+.portfolio-copy h3 {
+    font-size: 28px;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: 500;
+}
+
+.portfolio-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .3s;
+    background: #e9eef5;
+}
+
+.portfolio-card:hover .portfolio-thumb {
+    transform: scale(1.06);
+}
+
+/* Portfolio arrows */
+.work-arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 28px;
+}
+
+.work-arrows button {
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 36px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .3s, color .3s, transform .3s;
+    box-shadow: 0 6px 15px rgba(13, 71, 161, .18);
+}
+
+.work-arrows button:hover {
+    background: var(--color-primary-hover);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* ==================================================
+   REVIEWS
+================================================== */
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--section-padding) var(--content-padding);
+    background: #ffffff;
+}
+
+.reviews-content {
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 30px;
+}
+
+/* ==================================================
+   FAQ
+================================================== */
+
+.faq-section {
+    padding: var(--section-padding) var(--content-padding);
+    background: var(--color-page-background);
+}
+
+.faq-header {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.faq-header h2 {
+    margin-bottom: 20px;
+    color: var(--color-primary);
+    font-size: 36px;
+}
+
+.faq-header p {
+    line-height: 1.8;
+    color: #555;
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-top: 1px solid rgba(13, 71, 161, 0.18);
+}
+
+.faq-item:last-child {
+    border-bottom: 1px solid rgba(13, 71, 161, 0.18);
+}
+
+.faq-item summary {
+    position: relative;
+    padding: 22px 42px 22px 0;
+    color: var(--color-heading);
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    transition: color .3s, padding-left .3s;
+}
+
+.faq-item summary:hover {
+    color: var(--color-primary);
+    padding-left: 8px;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    position: absolute;
+    top: 17px;
+    right: 4px;
+    color: var(--color-primary);
+    content: '+';
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.faq-item[open] summary::after {
+    content: '\2212';
+}
+
+.faq-item p {
+    max-width: 760px;
+    padding: 0 42px 22px 0;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* TABLE */
+
+
+#table-section {
+    background-color: var(--color-page-background);
+    opacity: 0.8;
+    background-image:  radial-gradient(#444CF7 1.5px, transparent 1.5px), radial-gradient(#444CF7 1.5px, #e9eef5 1.5px);
+    background-size: 20px 20px;
+    background-position: 0 0,10px 10px;
+    width: 100%;
+    height: auto;
+    padding-bottom: 2vh;
+    
+}
+
+h2#table-caption {
+    color: white;
+    background-color: #0D47A1;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 100px;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 1%;
+    box-shadow: 9px 10px 0px 0px #22304a;
+}
+
+#materials-table {
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(34, 48, 74, 25%);
+    box-shadow: 7px 8px 0px 0px rgb(34, 48, 74, 10%);
+}
+
+#materials-table th, #materials-table td {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 30px 20px;
+    min-width: 5vw;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+}
+
+#materials-table th {
+    background-color: #0D47A1;
+    color: white;
+    font-size: 12px;
+}
+
+#materials-table td.clothe-type {
+    background-color: #0D47A1;
+    color: white;
+    font-size: 12px;
+}
+
+#description-table {
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    border-spacing: 8px;
+    padding: 10px;
+    background-color: rgb(34, 48, 74, 25%);
+    box-shadow: 7px 8px 0px 0px rgb(34, 48, 74, 10%);
+}
+
+#description-table td {
+    padding: 12px;
+    font-size: 14px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#description-table td.material-type {
+    background-color: #0D47A1;
+    color: white;
+}
+
+.material-type {
+    background-color: blue;
+    color: white;
+}
+
+/* From clothe type to checkmark glow */
+
+/* shirt row */
+#shirt-row:has(.clothe-type:hover) .clothe-type, #shirt-row:has(.clothe-type:hover) td.aircool, #shirt-row:has(.clothe-type:hover) td.clothe-type, #shirt-row:has(.clothe-type:hover) td.cotton, #shirt-row:has(.clothe-type:hover) td.cotton-polyester, 
+#shirt-row:has(.clothe-type:hover) td.dryfit, #shirt-row:has(.clothe-type:hover) td.polydex, #shirt-row:has(.clothe-type:hover) td.polyester, #shirt-row:has(.clothe-type:hover) td.silk,
+/* sports wear row */
+#sports-wear-row:has(.clothe-type:hover) .clothe-type, #sports-wear-row:has(.clothe-type:hover) td.aircool, #sports-wear-row:has(.clothe-type:hover) td.dryfit, #sports-wear-row:has(.clothe-type:hover) td.mesh,
+#sports-wear-row:has(.clothe-type:hover) td.polydex, #sports-wear-row:has(.clothe-type:hover) td.polyester, #sports-wear-row:has(.clothe-type:hover) td.spandex,    
+/* uniform/polos row*/
+#unifpolos-row:has(.clothe-type:hover) .clothe-type, #unifpolos-row:has(.clothe-type:hover) td.cotton, #unifpolos-row:has(.clothe-type:hover) td.cotton-polyester,
+#unifpolos-row:has(.clothe-type:hover) td.lacoste, #unifpolos-row:has(.clothe-type:hover) td.oxford, #unifpolos-row:has(.clothe-type:hover) td.pique,  
+/* hoodie/jackets row*/
+#hoodie-jackets-row:has(.clothe-type:hover) .clothe-type, #hoodie-jackets-row:has(.clothe-type:hover) td.fleece, 
+#hoodie-jackets-row:has(.clothe-type:hover) td.french-terry, #hoodie-jackets-row:has(.clothe-type:hover) td.polyester,
+/* accessories row */
+#accessories-row:has(.clothe-type:hover) .clothe-type, #accessories-row:has(.clothe-type:hover) td.canvas, #accessories-row:has(.clothe-type:hover) td.mesh, 
+#accessories-row:has(.clothe-type:hover) td.polyester, #accessories-row:has(.clothe-type:hover) td.rib-fabric { 
+    background-color: yellow; 
+    color: black;
+}
+
+
+/* From material name to checkmark glow */
+
+/* aircool */
+#materials-table th.aircool:hover, #materials-table:has(th.aircool:hover) td.aircool, 
+/* canvas */
+#materials-table th.canvas:hover, #materials-table:has(th.canvas:hover) td.canvas, 
+/* cotton */
+#materials-table th.cotton:hover, #materials-table:has(th.cotton:hover) td.cotton, 
+/* cotton polyester */
+#materials-table th.cotton-polyester:hover, #materials-table:has(th.cotton-polyester:hover) td.cotton-polyester,
+/* dryfit */
+#materials-table th.dryfit:hover, #materials-table:has(th.dryfit:hover) td.dryfit,
+/* fleece */
+#materials-table th.fleece:hover, #materials-table:has(th.fleece:hover) td.fleece, 
+/* french terry */
+#materials-table th.french-terry:hover, #materials-table:has(th.french-terry:hover) td.french-terry, 
+/* lacoste */
+#materials-table th.lacoste:hover, #materials-table:has(th.lacoste:hover) td.lacoste, 
+/* mesh */
+#materials-table th.mesh:hover, #materials-table:has(th.mesh:hover) td.mesh,
+/* oxford */
+#materials-table th.oxford:hover, #materials-table:has(th.oxford:hover) td.oxford,
+/* pique */
+#materials-table th.pique:hover, #materials-table:has(th.pique:hover) td.pique, 
+/* polydex */
+#materials-table th.polydex:hover, #materials-table:has(th.polydex:hover) td.polydex, 
+/* polyester */
+#materials-table th.polyester:hover, #materials-table:has(th.polyester:hover) td.polyester, 
+/* rib fabric */
+#materials-table th.rib-fabric:hover, #materials-table:has(th.rib-fabric:hover) td.rib-fabric,
+/* silk */
+#materials-table th.silk:hover, #materials-table:has(th.silk:hover) td.silk,
+/* aircool */
+#materials-table th.spandex:hover, #materials-table:has(th.spandex:hover) td.spandex {
+    background-color: yellow;
+    color: black;
+}
+
+/* Hover intersect glow */
+
+/* aircool */
+#materials-table td.aircool:hover, #materials-table:has(td.aircool:hover) th.aircool, #materials-table tr:has(td.aircool:hover) .clothe-type,
+/* canvas */
+#materials-table td.canvas:hover, #materials-table:has(td.canvas:hover) th.canvas, #materials-table tr:has(td.canvas:hover) .clothe-type,
+/* cotton */
+#materials-table td.cotton:hover, #materials-table:has(td.cotton:hover) th.cotton, #materials-table tr:has(td.cotton:hover) .clothe-type,
+/* cotton polyester */
+#materials-table td.cotton-polyester:hover, #materials-table:has(td.cotton-polyester:hover) th.cotton-polyester, #materials-table tr:has(td.cotton-polyester:hover) .clothe-type.clothe-type,
+/* dryfit */
+#materials-table td.dryfit:hover, #materials-table:has(td.dryfit:hover) th.dryfit, #materials-table tr:has(td.dryfit:hover) .clothe-type,
+/* fleece */
+#materials-table td.fleece:hover, #materials-table:has(td.fleece:hover) th.fleece, #materials-table tr:has(td.fleece:hover) .clothe-type,
+/* french terry */
+#materials-table td.french-terry:hover, #materials-table:has(td.french-terry:hover) th.french-terry, #materials-table tr:has(td.french-terry:hover) .clothe-type,
+/* lacoste */
+#materials-table td.lacoste:hover, #materials-table:has(td.lacoste:hover) th.lacoste, #materials-table tr:has(td.lacoste:hover) .clothe-type,
+/* mesh */
+#materials-table td.mesh:hover, #materials-table:has(td.mesh:hover) th.mesh, #materials-table tr:has(td.mesh:hover) .clothe-type,
+/* oxford */
+#materials-table td.oxford:hover, #materials-table:has(td.oxford:hover) th.oxford, #materials-table tr:has(td.oxford:hover) .clothe-type,
+/* pique */
+#materials-table td.pique:hover, #materials-table:has(td.pique:hover) th.pique, #materials-table tr:has(td.pique:hover) .clothe-type,
+/* polydex */
+#materials-table td.polydex:hover, #materials-table:has(td.polydex:hover) th.polydex, #materials-table tr:has(td.polydex:hover) .clothe-type,
+/* polyester */
+#materials-table td.polyester:hover, #materials-table:has(td.polyester:hover) th.polyester, #materials-table tr:has(td.polyester:hover) .clothe-type,
+/* rib fabric */
+#materials-table td.rib-fabric:hover, #materials-table:has(td.rib-fabric:hover) th.lacorib-fabricste, #materials-table tr:has(td.rib-fabric:hover) .clothe-type,
+/* silk */
+#materials-table td.silk:hover, #materials-table:has(td.silk:hover) th.silk, #materials-table tr:has(td.silk:hover) .clothe-type,
+/* spandex */
+#materials-table td.spandex:hover, #materials-table:has(td.spandex:hover) th.spandex, #materials-table tr:has(td.spandex:hover) .clothe-type {
+    background-color: darkblue;
+    color: yellow;
+}
+
+.empty-cell {
+    visibility: hidden;
+}
+
+/* ==================================================
+   WHY CHOOSE US
+================================================== */
+
+.why-us {
+    padding: var(--section-padding) var(--content-padding);
+    background: #ffffff;
+}
+
+.why-us-header {
+    max-width: 760px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #F9A825;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.why-us-header h2 {
+    margin-bottom: 18px;
+    color: var(--color-primary);
+    font-size: 36px;
+}
+
+.why-us-header p {
+    line-height: 1.8;
+    color: #555;
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-card {
+    padding: 30px 24px;
+    background: var(--color-page-background);
+    border: 1px solid rgba(13, 71, 161, .08);
+    border-radius: 14px;
+    text-align: center;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(13, 71, 161, .12);
+}
+
+.why-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: var(--color-accent);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.why-card h3 {
+    margin-bottom: 12px;
+    color: var(--color-heading);
+}
+
+.why-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* ==================================================
+   MATERIALS
+================================================== */
+
+.materials-section {
+    padding: var(--section-padding) var(--content-padding);
+    background: var(--color-page-background);
+}
+
+.materials-header {
+    max-width: 760px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.materials-header h2 {
+    margin-bottom: 18px;
+    color: var(--color-primary);
+    font-size: 36px;
+}
+
+.materials-header p {
+    line-height: 1.8;
+    color: #555;
+}
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.material-card {
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(13, 71, 161, .08);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.material-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(13, 71, 161, .15);
+}
+
+.material-image {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    background: #e9eef5;
+}
+
+.material-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s;
+}
+
+.material-card:hover .material-image img {
+    transform: scale(1.06);
+}
+
+.material-content {
+    padding: 22px;
+}
+
+.material-content h3 {
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+.material-content p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* ==================================================
+   HOW TO ORDER
+================================================== */
+
+.process-section {
+    padding: var(--section-padding) var(--content-padding);
+    background: #ffffff;
+}
+
+.process-header {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.process-header h2 {
+    margin-bottom: 18px;
+    color: var(--color-primary);
+    font-size: 36px;
+}
+
+.process-header p {
+    line-height: 1.8;
+    color: #555;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.process-card {
+    position: relative;
+    padding: 35px 25px 30px;
+    background: var(--color-page-background);
+    border-radius: 16px;
+    border: 1px solid rgba(13, 71, 161, .08);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(13, 71, 161, .1);
+}
+
+.process-number {
+    display: block;
+    margin-bottom: 22px;
+    color: var(--color-accent);
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.process-card h3 {
+    margin-bottom: 12px;
+    color: var(--color-heading);
+}
+
+.process-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* FORMS */
+
+#delivery-form-section{
+    display: flex;
+    background-color: var(--color-page-background);
+    padding: 15px 8%;
+    width: 100dvw;
+    height: auto;
+    opacity: 0.9;
+    background-image: radial-gradient(circle, rgb(5, 1, 1) 0.5px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+#form-caption{
+    flex: 0;
+    margin: 9% 12%;
+    padding: 40px 40px;
+    max-height: fit-content;
+    background-color: var(--color-primary);
+    box-shadow: 9px 10px 0px 0px var(--color-heading); 
+    border-radius: 10px;
+}
+
+#form-caption h2{
+    text-align: justify;
+    color: var(--color-accent);
+    font-size: 70px;
+    line-height: 1.2;
+}
+
+#form-caption h3{
+    text-align: left;
+    color: white;
+    font-size: 20px;
+}
+
+#form-design{
+    display: flex;
+    width: 500px;
+    padding: 30px;
+    margin: 3% 0;
+    background-color: var(--color-primary);
+    box-shadow: 9px 10px 0px 0px var(--color-heading); 
+}
+
+#form-design form{
+    padding: 0px;
+    width: 100%;
+}
+
+#form-design label{
+    color: var(--color-accent);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#form-design input[type = "text"], #form-design textarea{
+    width: 100%;
+    padding: 9px 12px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+#form-design button{
+    position: relative;
+    width: 100%;
+    padding: 9px 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #808080;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#form-design button:hover {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+#form-design input[name = "otherInput"]{
+    visibility: hidden;
+}
+
+#form-design #product-choice-btns, #product-choice-btns label{
+    margin: auto;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+/* ==================================================
+   BUSINESS INFORMATION / CONTACT
+================================================== */
+
+.business-info {
+    padding: 90px var(--content-padding);
+    background: var(--color-primary);
+    color: #ffffff;
+}
+
+.business-info-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.business-info-text {
+    width: 52%;
+}
+
+.business-info-text h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.business-info-text > p {
+    max-width: 650px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, .82);
+    line-height: 1.8;
+}
+
+.business-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.business-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.detail-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: var(--color-primary);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.business-detail strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.business-detail p {
+    color: rgba(255, 255, 255, .78);
+    line-height: 1.6;
+}
+
+.business-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.outline-dark {
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.outline-dark:hover {
+    background: #ffffff;
+    color: var(--color-primary);
+}
+
+.business-info-image {
+    width: 42%;
+}
+
+.business-info-image img {
+    display: block;
+    width: 100%;
+    min-height: 360px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 4px solid rgba(255, 255, 255, .15);
+}
+
+/* ==================================================
+   FINAL CTA
+================================================== */
+
+.final-cta {
+    padding: 90px var(--content-padding);
+    background: #e9eef5;
+    text-align: center;
+}
+
+.final-cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.final-cta h2 {
+    margin-bottom: 20px;
+    color: var(--color-primary);
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.final-cta p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.final-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.site-footer {
+    --footer-background: #0D47A1;
+    --footer-muted: rgba(255, 255, 255, .72);
+
+    padding: 72px var(--content-padding) 28px;
+    background: var(--footer-background);
+    color: #fff;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    max-width: 390px;
+}
+
+.footer-logo {
+    display: block;
+    width: 270px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+.footer-brand p {
+    max-width: 360px;
+    color: var(--footer-muted);
+    line-height: 1.7;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, .16);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background .3s, transform .3s, color .3s;
+}
+
+.footer-socials a:hover {
+    background: var(--color-accent);
+    color: #182B49;
+    transform: translateY(-3px);
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.footer-column a,
+.footer-bottom a {
+    color: var(--footer-muted);
+    transition: color .3s;
+}
+
+.footer-column a:hover,
+.footer-bottom a:hover {
+    color: var(--color-accent);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 90px auto 0;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, .24);
+    color: var(--footer-muted);
+    font-size: 14px;
+}
+
+.footer-bottom div {
+    display: flex;
+    gap: 8px;
+}
+
+/* ==================================================
+   TABLET RESPONSIVE
+================================================== */
+
+@media (max-width: 1000px) {
+
+    :root {
+        --content-padding: 5%;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .navbar ul {
+        gap: 12px;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+    }
+
+    .hero {
+        gap: 35px;
+    }
+
+    .hero-text {
+        width: 52%;
+    }
+
+    .hero-image {
+        width: 42%;
+    }
+
+    .about {
+        gap: 40px;
+    }
+
+    .why-us-grid,
+    .materials-grid,
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 25px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ==================================================
+   TABLET / MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+    :root {
+        --content-padding: 5%;
+        --section-padding: 60px;
+    }
+
+    /* Navigation */
+
+    .navbar {
+        flex-direction: column;
+        padding: 18px 5%;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 75px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+        margin: 10px 0;
+        gap: 10px;
+    }
+
+    .navbar ul li {
+        margin: 0;
+    }
+
+    .navbar ul li a {
+        font-size: 15px;
+    }
+
+    .navbar > .button {
+        margin-top: 5px;
+    }
+
+    /* Hero */
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 65px 5%;
+        min-height: auto;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(36px, 8vw, 48px);
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+    /* About */
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+        padding: 60px 5%;
+    }
+
+    .about-image,
+    .about-content {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .about-content h2 {
+        font-size: 32px;
+    }
+
+    /* Services */
+
+    .services,
+    .products,
+    .reviews {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .services-content h2,
+    .products-content h2,
+    .reviews-content h2,
+    .portfolio-header h2,
+    .faq-header h2 {
+        font-size: 32px;
+    }
+
+    /* Carousel */
+
+    .slider-wrap {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .slider-track {
+        gap: 15px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .slider-image {
+        width: 75vw;
+        min-width: 75vw;
+        max-width: 300px;
+        height: 190px;
+    }
+
+    .slider-arrow {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        font-size: 28px;
+    }
+
+    /* Reviews */
+
+    .reviews-slider {
+        width: 100%;
+        --review-card-width: 78vw;
+    }
+
+    .review-card {
+        min-height: 230px;
+        padding: 22px;
+    }
+
+    /* Portfolio */
+
+    .portfolio-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .portfolio-grid {
+        gap: 18px;
+    }
+
+    .portfolio-card {
+        flex: 0 0 82vw;
+        height: 330px;
+    }
+
+    .portfolio-copy {
+        padding: 60px 22px 20px;
+    }
+
+    .portfolio-copy h3 {
+        font-size: 24px;
+    }
+
+    .work-arrows {
+        gap: 20px;
+    }
+
+    .work-arrows button {
+        width: 42px;
+        height: 42px;
+        font-size: 32px;
+    }
+
+    /* FAQ */
+
+    .faq-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .faq-item summary {
+        font-size: 16px;
+        padding-right: 35px;
+    }
+
+    .faq-item p {
+        padding-right: 15px;
+    }
+
+    /* Why Us */
+
+    .why-us {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .why-us-grid,
+    .materials-grid,
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Business */
+
+    .business-info {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .business-info-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .business-info-text,
+    .business-info-image {
+        width: 100%;
+    }
+
+    .business-info-text h2 {
+        font-size: 34px;
+    }
+
+    /* Footer */
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 20px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 55px;
+        text-align: center;
+    }
+}
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    :root {
+        --content-padding: 5%;
+        --section-padding: 50px;
+    }
+
+    .button {
+        padding: 11px 18px;
+        font-size: 14px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text .button {
+        display: inline-block;
+        margin: 5px 0;
+    }
+
+    .outline {
+        margin-left: 5px;
+    }
+
+    .why-us-grid,
+    .materials-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-us-header h2,
+    .materials-header h2,
+    .process-header h2 {
+        font-size: 30px;
+    }
+
+    .business-info-text h2 {
+        font-size: 30px;
+    }
+
+    .business-info-image img {
+        min-height: 250px;
+    }
+
+    .business-buttons,
+    .final-cta-buttons {
+        flex-direction: column;
+    }
+
+    .business-buttons .button,
+    .final-cta-buttons .button {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .final-cta h2 {
+        font-size: 32px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-logo {
+        width: 220px;
+    }
+
+    .footer-bottom div {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* ==================================================
+   VERY SMALL MOBILE
+================================================== */
+
+@media (max-width: 400px) {
+
+    .navbar {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .hero {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .slider-wrap {
+        gap: 5px;
+    }
+
+    .slider-arrow {
+        width: 34px;
+        min-width: 34px;
+        height: 34px;
+        font-size: 24px;
+    }
+
+    .slider-image {
+        width: 72vw;
+        min-width: 72vw;
+        height: 160px;
+    }
+
+    .reviews-slider {
+        --review-card-width: 76vw;
+    }
+
+    .review-card {
+        padding: 18px;
+    }
+
+    .portfolio-card {
+        flex: 0 0 86vw;
+        height: 290px;
+    }
+
+    .portfolio-copy h3 {
+        font-size: 21px;
+    }
+}
+
+/* ==================================================
+   IMAGE FALLBACK / LOADING APPEARANCE
+================================================== */
+
+.hero-image img,
+.about-image img,
+.slider-image,
+.portfolio-thumb,
+.material-image img,
+.business-info-image img {
+    background: #e9eef5;
+}
+
+/* ==================================================
+   ACCESSIBILITY
+================================================== */
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+/* ==================================================
+   REDUCE ANIMATION FOR USERS WHO PREFER IT
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+    .slider-track,
+    .portfolio-grid {
+        scroll-behavior: auto;
+    }
+}
