@@ -679,28 +679,19 @@ header {
 
 
 #table-section {
-    background-color: var(--color-page-background);
-    opacity: 0.8;
-    background-image:  radial-gradient(#444CF7 1.5px, transparent 1.5px), radial-gradient(#444CF7 1.5px, #e9eef5 1.5px);
-    background-size: 20px 20px;
-    background-position: 0 0,10px 10px;
     width: 100%;
     height: auto;
     padding-bottom: 2vh;
-    
+    background-color: white;
 }
 
-h2#table-caption {
-    color: white;
-    background-color: #0D47A1;
-    font-weight: 700;
+h2.table-caption {
+    color: var(--color-primary);
+    font-weight: 1000;
     font-size: 30px;
     text-align: center;
-    padding: 20px 100px;
-    width: fit-content;
     margin: auto;
     margin-bottom: 1%;
-    box-shadow: 9px 10px 0px 0px #22304a;
 }
 
 #materials-table {
@@ -708,14 +699,12 @@ h2#table-caption {
     margin: auto;
     text-align: center;
     padding: 15px;
-    background-color: rgb(34, 48, 74, 25%);
-    box-shadow: 7px 8px 0px 0px rgb(34, 48, 74, 10%);
 }
 
 #materials-table th, #materials-table td {
     font-size: 18px;
     font-weight: bold;
-    padding: 30px 20px;
+    padding: 30px max(20px);
     min-width: 5vw;
     border-radius: 20px;
     background-color: white;
@@ -723,15 +712,19 @@ h2#table-caption {
 }
 
 #materials-table th {
-    background-color: #0D47A1;
+    background-color: var(--color-primary);
     color: white;
     font-size: 12px;
 }
 
 #materials-table td.clothe-type {
-    background-color: #0D47A1;
+    background-color: var(--color-primary);
     color: white;
     font-size: 12px;
+}
+
+#materials-table td {
+    background-color: var(--color-page-background);
 }
 
 #description-table {
@@ -741,24 +734,22 @@ h2#table-caption {
     white-space: nowrap;
     border-spacing: 8px;
     padding: 10px;
-    background-color: rgb(34, 48, 74, 25%);
-    box-shadow: 7px 8px 0px 0px rgb(34, 48, 74, 10%);
 }
 
 #description-table td {
     padding: 12px;
     font-size: 14px;
-    background-color: white;
+    background-color: var(--color-page-background);
     border-radius: 20px;
 }
 
 #description-table td.material-type {
-    background-color: #0D47A1;
+    background-color: var(--color-primary);
     color: white;
 }
 
 .material-type {
-    background-color: blue;
+    background-color: var(--color-primary);
     color: white;
 }
 
@@ -779,8 +770,8 @@ h2#table-caption {
 /* accessories row */
 #accessories-row:has(.clothe-type:hover) .clothe-type, #accessories-row:has(.clothe-type:hover) td.canvas, #accessories-row:has(.clothe-type:hover) td.mesh, 
 #accessories-row:has(.clothe-type:hover) td.polyester, #accessories-row:has(.clothe-type:hover) td.rib-fabric { 
-    background-color: yellow; 
-    color: black;
+    background-color: var(--color-accent); 
+    color: white;
 }
 
 
@@ -818,8 +809,8 @@ h2#table-caption {
 #materials-table th.silk:hover, #materials-table:has(th.silk:hover) td.silk,
 /* aircool */
 #materials-table th.spandex:hover, #materials-table:has(th.spandex:hover) td.spandex {
-    background-color: yellow;
-    color: black;
+    background-color: var(--color-accent);
+    color: white;
 }
 
 /* Hover intersect glow */
@@ -851,13 +842,13 @@ h2#table-caption {
 /* polyester */
 #materials-table td.polyester:hover, #materials-table:has(td.polyester:hover) th.polyester, #materials-table tr:has(td.polyester:hover) .clothe-type,
 /* rib fabric */
-#materials-table td.rib-fabric:hover, #materials-table:has(td.rib-fabric:hover) th.lacorib-fabricste, #materials-table tr:has(td.rib-fabric:hover) .clothe-type,
+#materials-table td.rib-fabric:hover, #materials-table:has(td.rib-fabric:hover) th.rib-fabric, #materials-table tr:has(td.rib-fabric:hover) .clothe-type,
 /* silk */
 #materials-table td.silk:hover, #materials-table:has(td.silk:hover) th.silk, #materials-table tr:has(td.silk:hover) .clothe-type,
 /* spandex */
 #materials-table td.spandex:hover, #materials-table:has(td.spandex:hover) th.spandex, #materials-table tr:has(td.spandex:hover) .clothe-type {
     background-color: darkblue;
-    color: yellow;
+    color: var(--color-accent);
 }
 
 .empty-cell {
@@ -1167,13 +1158,22 @@ h2#table-caption {
     cursor: pointer;
 }
 
-#form-design button:hover {
+#form-design #clearForm:hover {
+    background-color: rgb(255, 102, 0);
+    color: white;
+}
+
+#form-design #submitForm:hover {
     background-color: var(--color-accent);
     color: white;
 }
 
-#form-design input[name = "otherInput"]{
+#form-design input[name = "otherInput"] {
     visibility: hidden;
+}
+
+#form-design:has(input[name = "choiceOther"]:checked) input[name = "otherInput"] {
+    visibility: visible;
 }
 
 #form-design #product-choice-btns, #product-choice-btns label{

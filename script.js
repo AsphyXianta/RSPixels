@@ -384,32 +384,27 @@ document.addEventListener("DOMContentLoaded", function () {
     Form scripts 
 */
 
-let choiceOther = document.getElementById('choiceOther'), otherInput = document.getElementById('otherInput'), resetFormBtn = document.getElementById('clearForm'), form = document.getElementById("deliveryForm");
+const deliveryForm = document.getElementById('deliveryForm');
 
-choiceOther.onchange = function(){makeChoieOtherInputAppear()};
+deliveryForm.addEventListener("submit", (event) => {
+    const submitConfirmation = confirm("Are you ready to submit?");
 
-resetFormBtn.onclick = function(){hideChoiceOtherInput()};
-
-// line 395-403 makes the code non-functional and only interactive, no data actually gets sent. remove it if the project needs database shenanigans
-
-form.addEventListener("submit", preventWebpageSubmitReset);
-
-function preventWebpageSubmitReset(event) {
-    event.preventDefault();
-
-    event.target.reset();
-
-    hideChoiceOtherInput();
-}
-
-function makeChoieOtherInputAppear() {
-    if (choiceOther.checked) {
-        otherInput.style.visibility= 'visible';
+    if (submitConfirmation === true){
+        alert("Your information was submitted succesfully! Thank you for reaching out!");
     } else {
-        otherInput.style.visibility = 'hidden';
+        event.preventDefault();
     }
-}
+});
 
-function hideChoiceOtherInput() {
-    otherInput.style.visibility = 'hidden';
+deliveryForm.addEventListener("reset", (event) => {
+    const resetConfirm = confirm("Are you sure you want to reset?");
+
+    if (resetConfirm === false){
+        event.preventDefault();
+    }  
+});
+
+// no resubmission pop-up window when website is refreshed
+if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
 }
