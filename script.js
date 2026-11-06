@@ -241,10 +241,44 @@ document.addEventListener("DOMContentLoaded", function () {
         'a[href^="#"]'
     );
 
+    const menuToggle = document.querySelector(".menu-toggle");
+    const primaryNavigation = document.getElementById("primary-navigation");
+    const setMenuOpen = function (isOpen) {
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+    };
+
+    if (menuToggle && primaryNavigation) {
+        menuToggle.addEventListener("click", function () {
+            setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (
+                event.key === "Escape" &&
+                menuToggle.getAttribute("aria-expanded") === "true"
+            ) {
+                setMenuOpen(false);
+                menuToggle.focus();
+            }
+        });
+    }
+
 
     internalLinks.forEach(function (link) {
 
         link.addEventListener("click", function (event) {
+
+            if (
+                menuToggle &&
+                primaryNavigation &&
+                primaryNavigation.contains(link)
+            ) {
+                setMenuOpen(false);
+            }
 
             const targetId =
                 link.getAttribute("href");

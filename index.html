@@ -12,13 +12,21 @@
         <header id="home">
             <nav class="navbar">
                 <div class="logo">
-                    <!-- IMAGE: RS Pixels Logo
-                        Use: Official RS Pixels logo.
-                        Suggested file: images/logo.png -->
-                    <img src="images/logo.png" alt="RS Pixels Logo">
+                    <img src="images/logo.jpg" alt="RS Pixels Logo">
                 </div>
 
-                <ul>
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="primary-navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul id="primary-navigation">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
@@ -26,10 +34,8 @@
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li class="nav-cta"><a href="#process" class="button">Get Started</a></li>
                 </ul>
-
-                <!-- Goes directly to How to Order -->
-                <a href="#process" class="button">Get Started</a>
             </nav>
         </header>
         <main>
@@ -42,38 +48,23 @@
                     </h1>
 
                     <p>
-                        RS Pixels is a local printing and apparel business established in 2021.
-                        We provide quality t-shirt printing, tarpaulins, stickers, and
-                        large-format printing for individuals, schools, organizations,
-                        and businesses. We aim to provide reliable service, quality output,
-                        and designs that bring our customers' ideas to life.
+                        Custom apparel, tarpaulins, stickers, and large-format printing
+                        made to bring your ideas to life.
                     </p>
-
-                    <!-- Goes to How to Order -->
-                    <a href="#process" class="button">Get Started</a>
 
                     <!-- Goes directly to Contact -->
                     <a href="#contact" class="button outline">Talk to Sales</a>
                 </div>
 
                 <div class="hero-image">
-                    <!-- IMAGE: Hero Banner
-                        Use: A high-quality photo showing RS Pixels printing work,
-                        custom shirts, printing machines, tarpaulins, or a combination
-                        of your products and services.
-                        Suggested file: images/hero-image.png -->
-                    <img src="images/hero-image.png" alt="RS Pixels printing and apparel services">
+                    <img src="images/picture.png" alt="Custom apparel and printed products at the RS Pixels workspace">
                 </div>
             </section>
 
             <!-- ABOUT SECTION -->
             <section class="about" id="about">
                 <div class="about-image">
-                    <!-- IMAGE: About RS Pixels
-                        Use: Actual photo of the RS Pixels store, printing workspace,
-                        equipment, staff, or completed printing projects.
-                        Suggested file: images/about.jpg -->
-                    <img src="images/about.jpg" alt="RS Pixels store and printing workspace">
+                    <img src="images/picture.png" alt="Custom apparel and printed products at RS Pixels">
                 </div>
 
                 <div class="about-content">
@@ -186,40 +177,24 @@
                     </button>
 
                     <div class="slider-track" id="services-track">
-                        <!-- IMAGE: Custom Apparel Printing
-                            Use: Actual photo of printed T-shirts, jerseys, uniforms,
-                            or other custom apparel.
-                            Suggested file: images/service-apparel.jpg -->
                         <img
-                            src="images/bg.png"
-                            alt="Custom apparel printing by RS Pixels"
+                            src="images/pic1.jpg"
+                            alt="Custom basketball jersey and shorts designs by RS Pixels"
                             class="slider-image">
 
-                        <!-- IMAGE: Tarpaulin Printing
-                            Use: Actual photo of finished tarpaulin banners,
-                            event banners, or promotional prints.
-                            Suggested file: images/service-tarpaulin.jpg -->
                         <img
-                            src="images/bg.png"
-                            alt="Tarpaulin printing by RS Pixels"
+                            src="images/pic2.jpg"
+                            alt="Custom polo shirts and uniforms by RS Pixels"
                             class="slider-image">
 
-                        <!-- IMAGE: Sticker Printing
-                            Use: Actual photo of printed stickers, labels,
-                            decals, or promotional stickers.
-                            Suggested file: images/service-stickers.jpg -->
                         <img
-                            src="images/bg.png"
-                            alt="Sticker printing by RS Pixels"
+                            src="images/pic3.jpg"
+                            alt="Custom hoodie and jacket designs by RS Pixels"
                             class="slider-image">
 
-                        <!-- IMAGE: Large Format Printing
-                            Use: Actual photo of signage, banners, posters,
-                            or other large-format printing projects.
-                            Suggested file: images/service-large-format.jpg -->
                         <img
-                            src="images/bg.png"
-                            alt="Large-format printing by RS Pixels"
+                            src="images/pic4.jpg"
+                            alt="Custom team jersey designs by RS Pixels"
                             class="slider-image">
                     </div>
 
@@ -257,37 +232,24 @@
                     </button>
 
                     <div class="slider-track" id="products-track">
-                        <!-- IMAGE: Custom T-Shirts
-                            Use: Actual photos of your printed T-shirts.
-                            Suggested file: images/product-shirts.jpg -->
                         <img
-                            src="images/bg.png"
-                            alt="Custom T-shirts by RS Pixels"
+                            src="images/pic1.jpg"
+                            alt="Custom basketball jersey and shorts designs by RS Pixels"
                             class="slider-image">
 
-                        <!-- IMAGE: Tarpaulin Products
-                            Use: Actual photos of finished tarpaulins.
-                            Suggested file: images/product-tarpaulin.jpg -->
                         <img
-                            src="images/bg.png"
-                            alt="Tarpaulin products by RS Pixels"
+                            src="images/pic2.jpg"
+                            alt="Custom polo shirts and uniforms by RS Pixels"
                             class="slider-image">
 
-                        <!-- IMAGE: Sticker Products
-                            Use: Actual photos of your sticker products.
-                            Suggested file: images/product-stickers.jpg -->
                         <img
-                            src="images/bg.png"
-                            alt="Sticker products by RS Pixels"
+                            src="images/pic3.jpg"
+                            alt="Custom hoodie and jacket designs by RS Pixels"
                             class="slider-image">
 
-                        <!-- IMAGE: Signage / Large Format
-                            Use: Actual photos of signage, banners,
-                            posters, or large-format prints.
-                            Suggested file: images/product-signage.jpg -->
                         <img
-                            src="images/bg.png"
-                            alt="Signage and large-format products by RS Pixels"
+                            src="images/pic4.jpg"
+                            alt="Custom team jersey designs by RS Pixels"
                             class="slider-image">
                     </div>
 
@@ -307,76 +269,61 @@
                 <div class="portfolio-header">
                     <h2>Our Work</h2>
                     <p>
-                        Explore selected RS Pixels work, including custom shirt designs,
-                        tarpaulins, signage, stickers, and other printed materials.
-                        Our portfolio shows the creative and printing projects we produce
-                        for different customer needs.
+                        Explore custom basketball jerseys, polo uniforms, hoodies,
+                        jackets, and team apparel designed by RS Pixels.
+                        Each design can be customized for your group or event.
                     </p>
                 </div>
 
                 <div class="portfolio-grid" id="portfolio-track">
                     <article class="portfolio-card">
-                        <!-- IMAGE: Custom Shirt Portfolio
-                            Use: Actual photo of your best custom shirt projects.
-                            Suggested file: images/portfolio-shirts.jpg -->
                         <img
-                            src="images/bg.png"
-                            alt="Custom shirt designs by RS Pixels"
+                            src="images/pic1.jpg"
+                            alt="Basketball jersey and shorts designs by RS Pixels"
                             class="portfolio-thumb">
 
                         <div class="portfolio-copy">
-                            <span class="tagline">CUSTOM APPAREL</span>
+                            <span class="tagline">BASKETBALL UNIFORMS</span>
 
-                            <h3>Discover Our<br>Shirt Designs</h3>
+                            <h3>Custom Basketball<br>Jerseys</h3>
                         </div>
                     </article>
 
                     <article class="portfolio-card">
-                        <!-- IMAGE: Tarpaulin Portfolio
-                            Use: Actual photo of completed tarpaulin projects.
-                            Suggested file: images/portfolio-tarpaulin.jpg -->
                         <img
-                            src="images/bg.png"
-                            alt="Tarpaulin printing projects by RS Pixels"
+                            src="images/pic2.jpg"
+                            alt="Polo shirt and uniform designs by RS Pixels"
                             class="portfolio-thumb">
 
                         <div class="portfolio-copy">
-                            <span class="tagline">TARPAULIN PRINTING</span>
+                            <span class="tagline">POLO UNIFORMS</span>
 
-                            <h3>Tarpaulin &<br>Event Prints</h3>
+                            <h3>Custom Polo<br>Shirts</h3>
                         </div>
                     </article>
 
                     <article class="portfolio-card">
-                        <!-- IMAGE: Signage Portfolio
-                            Use: Actual photo of signs, banners, storefront signs,
-                            or other signage projects.
-                            Suggested file: images/portfolio-signage.jpg -->
                         <img
-                            src="images/bg.png"
-                            alt="Signage projects by RS Pixels"
+                            src="images/pic3.jpg"
+                            alt="Custom hoodie and jacket designs by RS Pixels"
                             class="portfolio-thumb">
 
                         <div class="portfolio-copy">
-                            <span class="tagline">SIGNAGE & DISPLAY</span>
+                            <span class="tagline">HOODIES & JACKETS</span>
 
-                            <h3>Signage Projects</h3>
+                            <h3>Custom Hoodies<br>& Jackets</h3>
                         </div>
                     </article>
 
                     <article class="portfolio-card">
-                        <!-- IMAGE: Sticker / Promotional Portfolio
-                            Use: Actual photo of sticker, label, or promotional
-                            printing projects.
-                            Suggested file: images/portfolio-stickers.jpg -->
                         <img
-                            src="images/bg.png"
-                            alt="Sticker and promotional printing projects by RS Pixels"
+                            src="images/pic4.jpg"
+                            alt="Custom team jersey designs by RS Pixels"
                             class="portfolio-thumb">
                         <div class="portfolio-copy">
-                            <span class="tagline">STICKERS & PRINTS</span>
+                            <span class="tagline">TEAM APPAREL</span>
 
-                            <h3>Sticker &<br>Promotional Prints</h3>
+                            <h3>Custom Team<br>Jerseys</h3>
                         </div>
                     </article>
                 </div>
@@ -404,9 +351,9 @@
 
             <!-- TABLE SECTION -->
             <section id="table-section">
-                <br>
                 <h2 class = "table-caption">MATERIALS USED FOR CLOTHES</h2>
-                <table id = "materials-table">
+                <div class="table-scroll-wrapper" role="region" aria-label="Clothing material compatibility table" tabindex="0">
+                    <table id = "materials-table">
                     <thead>
                         <tr>
                             <th class = "empty-cell"></th>
@@ -530,12 +477,12 @@
                             <td class = "empty-cell"></td>
                         </tr>
                     </tbody>
-                </table>
+                    </table>
+                </div>
 
-                <br><br>
-
+                <h2 class = "table-caption">MATERIALS DESCRIPTION</h2>
+                <div class="table-scroll-wrapper" role="region" aria-label="Materials description table" tabindex="0">
                 <table id = "description-table">
-                    <h2 class = "table-caption">MATERIALS DESCRIPTION</h2>
                     <tbody>
                         <!-- Row 1 -->
                         <tr class = "row-1">
@@ -728,6 +675,7 @@
                         </tr>
                     </tbody>
                 </table>
+                </div>
             </section>
 
             <!-- REVIEWS SECTION -->
@@ -831,13 +779,10 @@
 
                 <div class="materials-grid">
                     <article class="material-card">
-                        <!-- IMAGE: Polydex Material
-                            Use: Actual close-up photo of Polydex fabric or finished Polydex shirt.
-                            Suggested file: images/material-polydex.jpg -->
                         <div class="material-image">
                             <img
-                                src="images/bg.png"
-                                alt="Polydex apparel material">
+                                src="images/pic1.jpg"
+                                alt="Custom basketball apparel example by RS Pixels">
                         </div>
 
                         <div class="material-content">
@@ -850,13 +795,10 @@
                     </article>
 
                     <article class="material-card">
-                        <!-- IMAGE: Dryfit Material
-                            Use: Actual close-up photo of Dryfit fabric or finished Dryfit apparel.
-                            Suggested file: images/material-dryfit.jpg -->
                         <div class="material-image">
                             <img
-                                src="images/bg.png"
-                                alt="Dryfit apparel material">
+                                src="images/pic2.jpg"
+                                alt="Custom polo uniform example by RS Pixels">
                         </div>
 
                         <div class="material-content">
@@ -869,13 +811,10 @@
                     </article>
 
                     <article class="material-card">
-                        <!-- IMAGE: Aircool Material
-                            Use: Actual close-up photo of Aircool fabric or finished Aircool apparel.
-                            Suggested file: images/material-aircool.jpg -->
                         <div class="material-image">
                             <img
-                                src="images/bg.png"
-                                alt="Aircool apparel material">
+                                src="images/pic3.jpg"
+                                alt="Custom hoodie and jacket example by RS Pixels">
                         </div>
 
                         <div class="material-content">
@@ -888,14 +827,11 @@
                     </article>
 
                     <article class="material-card">
-                        <!-- IMAGE: Silk Material
-                            Use: Actual close-up photo of Silk fabric or finished Silk apparel.
-                            Suggested file: images/material-silk.jpg -->
                         <div class="material-image">
 
                             <img
-                                src="images/bg.png"
-                                alt="Silk apparel material">
+                                src="images/pic4.jpg"
+                                alt="Custom team apparel example by RS Pixels">
                         </div>
 
                         <div class="material-content">
@@ -1071,13 +1007,9 @@
                     </div>
 
                     <div class="business-info-image">
-                        <!-- IMAGE: RS Pixels Business / Store
-                            Use: Actual photo of the RS Pixels store, workspace,
-                            staff, printing equipment, or storefront.
-                            Suggested file: images/store.jpg -->
                         <img
-                            src="images/about.jpg"
-                            alt="RS Pixels store and printing business">
+                            src="images/picture.png"
+                            alt="Custom apparel, stickers, and printed products at RS Pixels">
                     </div>
                 </div>
             </section>
@@ -1157,11 +1089,6 @@
                     </p>
 
                     <div class="final-cta-buttons">
-                        <!-- Goes to How to Order -->
-                        <a href="#process" class="button">
-                            Get Started
-                        </a>
-
                         <!-- Goes to FAQ -->
                         <a href="#faq" class="button outline">
                             Learn More
@@ -1175,11 +1102,8 @@
         <footer class="site-footer">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <!-- IMAGE: Footer Logo
-                        Use: Official RS Pixels logo.
-                        Suggested file: images/logo.png -->
                     <img
-                        src="images/logo.png"
+                        src="images/logo.jpg"
                         alt="RS Pixels Logo"
                         class="footer-logo">
 
