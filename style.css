@@ -696,6 +696,7 @@ h2.table-caption {
     font-size: 30px;
     text-align: center;
     margin: auto;
+    margin-top: 2%;
     margin-bottom: 1%;
 }
 
@@ -709,11 +710,9 @@ h2.table-caption {
 #materials-table th, #materials-table td {
     font-size: 18px;
     font-weight: bold;
-    padding: 30px max(20px);
-    min-width: 5vw;
-    border-radius: 20px;
     background-color: white;
     color: black;
+    cursor: pointer;
 }
 
 #materials-table th {
@@ -745,7 +744,6 @@ h2.table-caption {
     padding: 12px;
     font-size: 14px;
     background-color: var(--color-page-background);
-    border-radius: 20px;
 }
 
 #description-table td.material-type {
@@ -852,8 +850,8 @@ h2.table-caption {
 #materials-table td.silk:hover, #materials-table:has(td.silk:hover) th.silk, #materials-table tr:has(td.silk:hover) .clothe-type,
 /* spandex */
 #materials-table td.spandex:hover, #materials-table:has(td.spandex:hover) th.spandex, #materials-table tr:has(td.spandex:hover) .clothe-type {
-    background-color: rgba(37, 217, 243, .18);
-    color: var(--color-accent);
+    background-color: var(--color-accent);
+    color: white;
 }
 
 .empty-cell {
@@ -1101,7 +1099,6 @@ h2.table-caption {
 
 #form-caption{
     flex: 0;
-    margin: 9% 12%;
     padding: 40px 40px;
     max-height: fit-content;
     background-color: var(--color-primary);
@@ -1151,6 +1148,10 @@ h2.table-caption {
     resize: none;
 }
 
+#form-design #otherInput:disabled {
+    opacity: 0.5;
+}
+
 #form-design button{
     position: relative;
     width: 100%;
@@ -1163,22 +1164,8 @@ h2.table-caption {
     cursor: pointer;
 }
 
-#form-design #clearForm:hover {
-    background-color: rgb(255, 102, 0);
-    color: white;
-}
-
-#form-design #submitForm:hover {
-    background-color: var(--color-accent);
-    color: white;
-}
-
 #form-design input[name = "otherInput"] {
-    visibility: hidden;
-}
-
-#form-design:has(input[name = "choiceOther"]:checked) input[name = "otherInput"] {
-    visibility: visible;
+    margin-top: 8px;
 }
 
 #form-design #product-choice-btns, #product-choice-btns label{
@@ -2335,6 +2322,8 @@ h2.table-caption {
     width: 100%;
     max-width: min(100%, 84vw);
     table-layout: fixed;
+    border-collapse: collapse;
+    background-color: #F7FAFC;
 }
 
 #materials-table {
@@ -2343,7 +2332,6 @@ h2.table-caption {
 
 #description-table {
     white-space: normal;
-    border-spacing: clamp(1px, .25vw, 4px);
 }
 
 #materials-table th,
@@ -2357,7 +2345,7 @@ h2.table-caption {
 #materials-table th,
 #materials-table td.clothe-type,
 #description-table td.material-type {
-    font-size: clamp(8px, min(.75vw, 1.1vh), 12px);
+    font-size: clamp(12px, min(.75vw, 1.1vh), 12px);
 }
 
 #materials-table th,
@@ -2376,9 +2364,9 @@ h2.table-caption {
     color: var(--color-heading);
 }
 
-#materials-table td,
-#description-table td {
-    background-color: #0D1929;
+#materials-table td, #description-table td {
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
 }
 
 #delivery-form-section {
@@ -2390,8 +2378,8 @@ h2.table-caption {
     min-height: 0;
     padding: var(--section-padding) var(--content-padding);
     background-color: #0B1728;
-    background-image: radial-gradient(circle, rgba(98, 167, 207, .18) .6px, transparent 1px);
-    background-size: 22px 22px;
+    background-image: radial-gradient(circle, rgba(98, 167, 207, .20) .6px, transparent 1px);
+    background-size: 10px 10px;
     opacity: 1;
 }
 
@@ -2803,11 +2791,6 @@ header {
 .material-type {
     background-color: #D8F0F2;
     color: #17324D;
-}
-
-#materials-table td,
-#description-table td {
-    background-color: #F7FAFC;
 }
 
 #delivery-form-section {

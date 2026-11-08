@@ -419,6 +419,8 @@ document.addEventListener("DOMContentLoaded", function () {
 */
 
 const deliveryForm = document.getElementById('deliveryForm');
+const otherCheckbox = document.getElementById('choiceOther');
+const otherInput = document.getElementById('otherInput');
 
 deliveryForm.addEventListener("submit", (event) => {
     const submitConfirmation = confirm("Are you ready to submit?");
@@ -436,6 +438,10 @@ deliveryForm.addEventListener("reset", (event) => {
     if (resetConfirm === false){
         event.preventDefault();
     }  
+});
+
+otherCheckbox.addEventListener("change", () => {
+    otherInput.disabled = !otherCheckbox.checked;
 });
 
 // no resubmission pop-up window when website is refreshed
