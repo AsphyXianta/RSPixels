@@ -2123,6 +2123,16 @@ section:not(.hero):not(#delivery-form-section) {
 
 .about {
     background: var(--color-page-background);
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: start;
+    gap: clamp(24px, 5vw, 64px);
+}
+
+.about-image,
+.about-content {
+    width: auto;
+    min-width: 0;
 }
 
 .about-image img {
@@ -2890,6 +2900,10 @@ header {
 }
 
 @media (max-width: 768px) {
+    .about {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
     .navbar ul,
     .menu-toggle[aria-expanded="true"] + ul {
         background: #FFFFFF;
@@ -2904,4 +2918,105 @@ header {
     .menu-toggle span {
         background: #293F55;
     }
+}
+
+/* Consistent, expandable project imagery */
+.services .slider-image,
+.products .slider-image,
+.portfolio-section .portfolio-card,
+.materials-section .material-image {
+    aspect-ratio: 4 / 3;
+    height: auto;
+    min-height: 0;
+}
+
+.services .slider-image,
+.products .slider-image {
+    flex: 0 0 auto;
+}
+
+.portfolio-section .portfolio-card {
+    overflow: hidden;
+}
+
+.portfolio-section .portfolio-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.materials-section .material-image {
+    overflow: hidden;
+}
+
+.image-viewer {
+    position: fixed;
+    width: fit-content;
+    max-width: min(94vw, 1400px);
+    max-height: 94vh;
+    padding: 48px 20px 20px;
+    overflow: visible;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 12px;
+    background: #0B1728;
+    color: #FFFFFF;
+}
+
+.image-viewer::backdrop {
+    background: rgba(3, 10, 19, .88);
+    backdrop-filter: blur(4px);
+}
+
+.image-viewer figure {
+    margin: 0;
+}
+
+.image-viewer-picture {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: calc(94vw - 40px);
+    max-height: calc(94vh - 100px);
+    object-fit: contain;
+}
+
+.image-viewer-caption {
+    margin-top: 12px;
+    color: #E8F2FA;
+    line-height: 1.5;
+}
+
+.image-viewer-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .12);
+    color: #FFFFFF;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.image-viewer-close:hover {
+    background: var(--color-accent);
+}
+
+.services .slider-image[role="button"],
+.products .slider-image[role="button"],
+.portfolio-section .portfolio-thumb[role="button"],
+.materials-section .material-image img[role="button"] {
+    cursor: zoom-in;
+}
+
+.services .slider-image[role="button"]:focus-visible,
+.products .slider-image[role="button"]:focus-visible,
+.portfolio-section .portfolio-thumb[role="button"]:focus-visible,
+.materials-section .material-image img[role="button"]:focus-visible,
+.image-viewer-close:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
 }

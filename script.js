@@ -448,3 +448,52 @@ otherCheckbox.addEventListener("change", () => {
 if (window.history.replaceState) {
     window.history.replaceState(null, null, window.location.href);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const viewer = document.querySelector(".image-viewer");
+    const viewerImage = viewer.querySelector(".image-viewer-picture");
+    const viewerCaption = viewer.querySelector(".image-viewer-caption");
+    const closeButton = viewer.querySelector(".image-viewer-close");
+    const viewableImages = document.querySelectorAll(
+        ".services .slider-image, .products .slider-image, .portfolio-section .portfolio-thumb, .materials-section .material-image img"
+    );
+
+    viewableImages.forEach(function (image) {
+        image.tabIndex = 0;
+        image.setAttribute("role", "button");
+        image.setAttribute("aria-haspopup", "dialog");
+        image.setAttribute("aria-label", `View full image: ${image.alt}`);
+
+        function openViewer() {
+            viewerImage.src = image.currentSrc || image.src;
+            viewerImage.alt = image.alt;
+            viewerCaption.textContent = image.alt;
+            viewer.showModal();
+        }
+
+        image.addEventListener("click", openViewer);
+        image.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                openViewer();
+            }
+        });
+    });
+
+    closeButton.addEventListener("click", function () {
+        viewer.close();
+    });
+
+    viewer.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            event.preventDefault();
+            viewer.close();
+        }
+    });
+
+    viewer.addEventListener("click", function (event) {
+        if (event.target === viewer) {
+            viewer.close();
+        }
+    });
+});
