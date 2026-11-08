@@ -2945,6 +2945,12 @@ header {
     object-fit: cover;
 }
 
+.services.portfolio-section,
+.products.portfolio-section {
+    display: block;
+    background: var(--color-page-background);
+}
+
 .materials-section .material-image {
     overflow: hidden;
 }
