@@ -497,3 +497,66 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+// MATERIALS CAROUSEL
+document.addEventListener("DOMContentLoaded", function () {
+    const materialsTrack = document.getElementById("materials-track");
+    const materialButtons = document.querySelectorAll("[data-material-direction]");
+
+    if (!materialsTrack) return;
+
+    // Calculate the distance to move based on one card.
+    function getMaterialScrollAmount() {
+        const card = materialsTrack.querySelector(".material-card");
+
+        if (!card) return 300;
+
+        const styles = window.getComputedStyle(materialsTrack);
+        const gap = parseFloat(styles.columnGap) || 0;
+
+        return card.offsetWidth + gap;
+    }
+
+    // Move the carousel.
+    function moveMaterials(direction) {
+        materialsTrack.scrollBy({
+            left: getMaterialScrollAmount() * direction,
+            behavior: "smooth"
+        });
+    }
+
+    // Previous and next buttons.
+    materialButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const direction = Number(button.dataset.materialDirection);
+            moveMaterials(direction);
+        });
+    });
+
+    // Keyboard arrow controls.
+    materialsTrack.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowRight") {
+            event.preventDefault();
+            moveMaterials(1);
+        }
+
+        if (event.key === "ArrowLeft") {
+            event.preventDefault();
+            moveMaterials(-1);
+        }
+    });
+
+    // Mouse wheel horizontal scrolling.
+    materialsTrack.addEventListener("wheel", function (event) {
+        if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+            event.preventDefault();
+
+            materialsTrack.scrollBy({
+                left: event.deltaY,
+                behavior: "auto"
+            });
+        }
+    }, { passive: false });
+
+    // Touch swiping is supported through native horizontal scrolling.
+});

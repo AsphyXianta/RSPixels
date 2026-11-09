@@ -3026,3 +3026,223 @@ header {
     outline: 3px solid var(--color-accent);
     outline-offset: 3px;
 }
+
+
+/* MATERIALS SECTION */
+.materials-section {
+    width: 100%;
+    padding: 80px 6%;
+    background: var(--page-bg, #F4F8FB);
+    overflow: hidden;
+}
+
+.materials-header {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.materials-header .section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--accent, #087E8B);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.materials-header h2 {
+    margin-bottom: 14px;
+    color: var(--heading, #17324D);
+    font-size: clamp(28px, 4vw, 42px);
+}
+
+.materials-header p {
+    color: var(--body, #40566B);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* MATERIALS CAROUSEL */
+.materials-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.materials-grid {
+    display: flex;
+    gap: 22px;
+    width: 100%;
+    padding: 12px 5px 25px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+}
+
+.materials-grid::-webkit-scrollbar {
+    display: none;
+}
+
+/* MATERIAL CARD */
+.material-card {
+    flex: 0 0 calc((100% - 44px) / 3);
+    min-width: 0;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid rgba(23, 50, 77, 0.08);
+    box-shadow: 0 5px 18px rgba(23, 50, 77, 0.08);
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.material-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(23, 50, 77, 0.14);
+}
+
+.material-card img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    background: #EAF2F6;
+}
+
+.material-info {
+    padding: 20px;
+}
+
+.material-info h3 {
+    margin-bottom: 9px;
+    color: var(--heading, #17324D);
+    font-size: 19px;
+}
+
+.material-info p {
+    color: var(--body, #40566B);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* CAROUSEL ARROWS */
+.material-arrow {
+    flex-shrink: 0;
+    z-index: 2;
+    width: 43px;
+    height: 43px;
+    border: none;
+    border-radius: 50%;
+    background: var(--primary, #17324D);
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.material-arrow:hover {
+    background: var(--accent, #087E8B);
+    transform: scale(1.08);
+}
+
+.material-prev {
+    margin-right: 12px;
+}
+
+.material-next {
+    margin-left: 12px;
+}
+
+.material-arrow:focus-visible,
+.materials-grid:focus-visible {
+    outline: 3px solid var(--accent, #087E8B);
+    outline-offset: 4px;
+}
+
+.materials-hint {
+    margin-top: 8px;
+    text-align: center;
+    color: var(--body, #40566B);
+    font-size: 13px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .materials-section {
+        padding: 65px 4%;
+    }
+
+    .material-card {
+        flex-basis: calc((100% - 22px) / 2);
+    }
+
+    .material-card img {
+        height: 190px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .materials-section {
+        padding: 55px 5%;
+    }
+
+    .materials-header {
+        margin-bottom: 25px;
+    }
+
+    .materials-carousel {
+        gap: 8px;
+    }
+
+    .materials-grid {
+        gap: 14px;
+        padding: 10px 3px 20px;
+    }
+
+    .material-card {
+        flex-basis: 85%;
+    }
+
+    .material-card img {
+        height: 200px;
+    }
+
+    .material-info {
+        padding: 16px;
+    }
+
+    .material-arrow {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .material-prev {
+        margin-right: 0;
+    }
+
+    .material-next {
+        margin-left: 0;
+    }
+}
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+    .materials-grid {
+        scroll-behavior: auto;
+    }
+
+    .material-card,
+    .material-arrow {
+        transition: none;
+    }
+}
